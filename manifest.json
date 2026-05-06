@@ -1,0 +1,20 @@
+{
+  "name": "Straw Hat Dev - Yahya Jarray Portfolio",
+  "short_name": "Straw Hat Dev",
+  "description": "One Piece themed frontend developer portfolio showcasing Angular, TypeScript, and JavaScript projects",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0a0806",
+  "theme_color": "#f59e0b",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "jolly-roger.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer", "web"],
+  "lang": "en-US"
+}

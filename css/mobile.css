@@ -1,0 +1,244 @@
+/* Mobile-Specific Optimizations */
+
+/* Safe Area Insets for Notched Devices */
+@supports (padding: max(0px)) {
+    body {
+        padding-top: max(env(safe-area-inset-top), 0px);
+        padding-bottom: max(env(safe-area-inset-bottom), 0px);
+    }
+}
+
+/* Improve touch targets */
+@media (max-width: 768px) {
+    /* Nav Controls on Mobile */
+    .nav-controls {
+        gap: 8px;
+    }
+    
+    #language-toggle,
+    #dark-mode-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .language-dropdown {
+        right: 20px;
+        top: 70px;
+        min-width: 160px;
+    }
+    
+    .language-option {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+    
+    .treasure-card {
+        min-height: 400px;
+        padding: 20px;
+    }
+    
+    .card-links a,
+    .action-btn,
+    .nakama-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Better tap highlighting */
+    * {
+        -webkit-tap-highlight-color: rgba(245, 158, 11, 0.2);
+        -webkit-touch-callout: none;
+    }
+    
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Prevent zoom on input focus */
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+    
+    /* Better modal on mobile */
+    .modal-content {
+        margin: 10px;
+        max-height: calc(100vh - 20px);
+    }
+    
+    /* Optimize animations for mobile */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+    
+    /* Better image loading */
+    .card-image,
+    .project-image {
+        will-change: transform;
+        backface-visibility: hidden;
+    }
+    
+    /* Prevent overscroll */
+    body {
+        overscroll-behavior-y: contain;
+    }
+    
+    /* Better video on mobile */
+    .project-video {
+        max-height: 250px;
+    }
+}
+
+/* iPhone X and newer notch support */
+@supports (padding: max(0px)) {
+    .section-content {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+    }
+    
+    .audio-player {
+        bottom: max(24px, env(safe-area-inset-bottom));
+        right: max(24px, env(safe-area-inset-right));
+    }
+    
+    .character-indicator {
+        left: max(16px, env(safe-area-inset-left));
+        bottom: max(100px, calc(env(safe-area-inset-bottom) + 100px));
+    }
+    
+    .language-dropdown {
+        right: max(20px, env(safe-area-inset-right));
+    }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 896px) and (orientation: landscape) {
+    .section-content {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    
+    .modal-content {
+        max-height: 90vh;
+    }
+    
+    .project-image {
+        height: 200px;
+    }
+    
+    .character-indicator {
+        bottom: 20px;
+    }
+    
+    .nav-arrow-left,
+    .nav-arrow-right {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* Small phones (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .treasure-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .card-image-container {
+        height: 140px;
+    }
+    
+    .card-name {
+        font-size: 18px;
+    }
+    
+    .card-desc {
+        font-size: 12px;
+    }
+    
+    .modal-title {
+        font-size: 20px;
+    }
+    
+    .project-image {
+        height: 180px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 320px) {
+    .treasure-card {
+        padding: 16px;
+    }
+    
+    .card-character {
+        font-size: 28px;
+    }
+    
+    .card-bounty {
+        font-size: 9px;
+        padding: 3px 10px;
+    }
+    
+    .modal-header {
+        padding: 20px 16px 12px;
+    }
+    
+    .modal-body {
+        padding: 16px;
+    }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .card-image,
+    .project-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Dark mode support (if device prefers) */
+@media (prefers-color-scheme: dark) {
+    /* Already dark, but ensure consistency */
+    body {
+        background: var(--bg-primary);
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .treasure-card,
+    .modal-content,
+    .card-image {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .audio-player,
+    .nav-indicator,
+    .character-indicator,
+    .scroll-hint,
+    #canvas-container,
+    .ambient,
+    .vignette {
+        display: none !important;
+    }
+    
+    .section-content {
+        position: relative !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
