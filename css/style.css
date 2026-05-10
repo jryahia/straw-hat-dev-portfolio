@@ -769,23 +769,34 @@ nav {
     scroll-behavior: smooth;
 }
 
-#projects-content::-webkit-scrollbar {
-    width: 6px;
+/* ===== GLOBAL SCROLLBAR STYLING ===== */
+/* WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
 }
 
-#projects-content::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
+::-webkit-scrollbar-track {
+    background: #0d1117;
+    border-radius: 4px;
 }
 
-#projects-content::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--accent-gold), var(--accent-orange));
-    border-radius: 3px;
-    transition: background 0.3s ease;
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f97316, #dc2626);
+    border-radius: 8px;
+    border: 1px solid rgba(249, 115, 22, 0.35);
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-#projects-content::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-gold-bright);
+::-webkit-scrollbar-thumb:hover {
+    background: #fb923c;
+    border-color: rgba(251, 146, 60, 0.5);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #f97316 #0d1117;
 }
 
 .projects-header { 
