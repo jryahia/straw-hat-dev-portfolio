@@ -79,7 +79,7 @@ const projectsData = [
     name: 'n8n Workflow Agent',
     shortDesc: 'AI agent that generates and manages n8n automation workflows.',
     fullDesc: 'An intelligent automation agent that creates, validates, exports, and manages n8n workflows through natural language commands. Features a FastAPI backend with a Flet desktop UI for workflow generation and management, supporting complex multi-step automations.',
-    image: 'https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800',
+    image: 'https://images.unsplash.com/photo-1552581234-26160f608093?w=800',
     tech: ['Python', 'Flet', 'FastAPI', 'n8n API', 'LLM'],
     features: ['Natural language workflow creation', 'Workflow validation', 'Export/import', 'Template library', 'Desktop UI'],
     github: 'https://github.com/jryahia/n8n-workflow-agent',
@@ -241,7 +241,7 @@ const projectsData = [
     name: 'AI Chatbot Builder',
     shortDesc: 'RAG chatbot desktop app with Flet UI, ChromaDB, multi-LLM support.',
     fullDesc: 'A desktop application for building custom AI chatbots trained on your documents. Supports PDF, DOCX, TXT, and website ingestion with a full RAG pipeline using ChromaDB vector store and multi-LLM integration (OpenAI, Anthropic, local models).',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
+    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800',
     tech: ['Python', 'Flet', 'ChromaDB', 'LLM', 'RAG'],
     features: ['Document ingestion', 'RAG chatbot engine', 'Multi-LLM support', 'Project management', 'Embeddable widget'],
     github: 'https://github.com/jryahia/ai-chatbot-builder',
@@ -359,7 +359,7 @@ const projectsData = [
     name: 'Dedutto',
     shortDesc: 'Privacy-first expense management for Italian Partita IVA freelancers.',
     fullDesc: 'A privacy-first expense management application specifically designed for Italian Partita IVA freelancers. Tracks business expenses, generates tax reports, manages receipts, and keeps all data local for maximum privacy. Clean tkinter desktop experience.',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800',
+    image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800',
     tech: ['Python', 'tkinter', 'SQLite', 'Pandas', 'ReportLab'],
     features: ['Expense tracking', 'Tax report generation', 'Receipt management', 'Partita IVA optimized', 'Local privacy'],
     github: 'https://github.com/jryahia/dedutto',
@@ -373,7 +373,7 @@ const projectsData = [
     name: 'Business Analytics Dashboard',
     shortDesc: 'Full-stack BI dashboard with real-time analytics and Docker deployment.',
     fullDesc: 'A comprehensive business intelligence dashboard with FastAPI backend, React/TypeScript frontend, and a Flet desktop companion app. Features real-time analytics, interactive KPI tracking, data filtering, report export, and Docker Compose deployment.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800',
     tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'Docker'],
     features: ['Real-time analytics', 'Interactive dashboards', 'Data export', 'Docker deployment', 'Flet desktop app'],
     github: 'https://github.com/jryahia/business-analytics-dashboard',
@@ -431,7 +431,7 @@ function renderProjects() {
   grid.innerHTML = projectsData.map(p => `
     <div class="treasure-card" data-id="${p.id}">
       <div class="card-image-container">
-        <img class="card-image" src="${p.image}" alt="${p.name}" loading="lazy">
+        <img class="card-image" src="${p.image}" alt="${p.name}">
         <div class="card-overlay"><span class="view-details">View Details →</span></div>
         ${p.status === 'in-progress' ? '<div class="in-progress-stamp">⚗️ Still Brewing...</div>' : ''}
       </div>
