@@ -11,7 +11,7 @@ const projectsData = [
     tech: ['Python', 'FastAPI', 'LLM', 'SQLite', 'Docker'],
     features: ['LLM-powered goal decomposition', '4 worker agents with retry logic', 'SQLite task memory', 'FastAPI REST API', 'CLI + batch mode'],
     github: 'https://github.com/jryahia/agent-orchestrator',
-    demo: 'https://github.com/jryahia/agent-orchestrator',
+    demo: 'https://jryahia.github.io/agent-orchestrator/',
     status: 'done'
   },
   {
@@ -25,7 +25,7 @@ const projectsData = [
     tech: ['Python', 'FastAPI', 'LLM', 'Pandas', 'Docker'],
     features: ['5 enrichment types', 'Batch async processing', 'Cost estimator', 'CSV/JSON/XLSX export', 'Dark-themed web UI'],
     github: 'https://github.com/jryahia/data-enricher',
-    demo: 'https://github.com/jryahia/data-enricher',
+    demo: 'https://jryahia.github.io/data-enricher/',
     status: 'done'
   },
   {
@@ -39,7 +39,7 @@ const projectsData = [
     tech: ['Python', 'Playwright', 'LLM', 'FastAPI', 'Docker'],
     features: ['Observe-Think-Act loop', '9 action types', 'Multi-LLM support', 'Stealth anti-detection', 'Task queue API'],
     github: 'https://github.com/jryahia/browser-agent',
-    demo: 'https://github.com/jryahia/browser-agent',
+    demo: 'https://jryahia.github.io/browser-agent/',
     status: 'done'
   },
 
@@ -55,7 +55,7 @@ const projectsData = [
     tech: ['Python', 'Flet', 'Web3', 'Solana RPC', 'CoinGecko'],
     features: ['Multi-chain support', 'Whale scoring system', 'Risk flag detection', 'P&L tracking', '30+ RPC endpoints'],
     github: 'https://github.com/jryahia/wallet-analyzer',
-    demo: 'https://github.com/jryahia/wallet-analyzer',
+    demo: 'https://jryahia.github.io/wallet-analyzer/',
     status: 'done'
   },
   {
@@ -69,7 +69,7 @@ const projectsData = [
     tech: ['Python', 'FastAPI', 'SQLite', 'Docker', 'BeautifulSoup'],
     features: ['Multi-source scraping', 'Proxy rotation', 'Configurable pipelines', 'Web UI dashboard', 'Scheduled scraping'],
     github: 'https://github.com/jryahia/scraper-platform',
-    demo: 'https://github.com/jryahia/scraper-platform',
+    demo: 'https://jryahia.github.io/scraper-platform/',
     status: 'done'
   },
   {
@@ -83,7 +83,7 @@ const projectsData = [
     tech: ['Python', 'Flet', 'FastAPI', 'n8n API', 'LLM'],
     features: ['Natural language workflow creation', 'Workflow validation', 'Export/import', 'Template library', 'Desktop UI'],
     github: 'https://github.com/jryahia/n8n-workflow-agent',
-    demo: 'https://github.com/jryahia/n8n-workflow-agent',
+    demo: 'https://jryahia.github.io/n8n-workflow-agent/',
     status: 'done'
   },
 
@@ -99,7 +99,7 @@ const projectsData = [
     tech: ['Python', 'Web3', 'Polymarket API', 'LLM', 'SQLite'],
     features: ['Multi-source signals', 'Soul personality module', 'Adaptive skills', 'Portfolio management', 'Risk engine'],
     github: 'https://github.com/jryahia/crypto-polymarket-bot',
-    demo: 'https://github.com/jryahia/crypto-polymarket-bot',
+    demo: 'https://jryahia.github.io/crypto-polymarket-bot/',
     status: 'in-progress'
   },
   {
@@ -113,7 +113,7 @@ const projectsData = [
     tech: ['Python', 'Web3', 'DEX APIs', 'SQLite', 'Async'],
     features: ['Whale alerts', 'Portfolio tracking', 'Copy-trade via Jupiter', 'Multi-chain support', 'Real-time monitoring'],
     github: 'https://github.com/jryahia/smart-wallet-tracker',
-    demo: 'https://github.com/jryahia/smart-wallet-tracker',
+    demo: 'https://jryahia.github.io/smart-wallet-tracker/',
     status: 'done'
   },
   {
@@ -127,7 +127,7 @@ const projectsData = [
     tech: ['Python', 'Flet', 'DEX APIs', 'Async', 'Web3'],
     features: ['5-source scanning', 'Early token detection', 'Liquidity analysis', 'Price tracking', '30+ profile search'],
     github: 'https://github.com/jryahia/meme-coin-scanner',
-    demo: 'https://github.com/jryahia/meme-coin-scanner',
+    demo: 'https://jryahia.github.io/meme-coin-scanner/',
     status: 'done'
   },
 
@@ -157,7 +157,7 @@ const projectsData = [
     tech: ['Python', 'FastAPI', 'React', 'PostgreSQL', 'Docker'],
     features: ['Product management', 'Shopping cart', 'Admin dashboard', 'Order tracking', 'User management'],
     github: 'https://github.com/jryahia/ecommerce-management-system',
-    demo: 'https://github.com/jryahia/ecommerce-management-system',
+    demo: 'https://jryahia.github.io/ecommerce-management-system/',
     status: 'done'
   },
   {
@@ -171,7 +171,7 @@ const projectsData = [
     tech: ['JavaScript', 'Next.js', 'FastAPI', 'Python', 'LLM'],
     features: ['Contract analysis', 'Key term extraction', 'Italian market focused', 'FastAPI + Next.js', 'Docker ready'],
     github: 'https://github.com/jryahia/affittobot',
-    demo: 'https://github.com/jryahia/affittobot',
+    demo: 'https://jryahia.github.io/affittobot/',
     status: 'done'
   },
 
@@ -187,7 +187,7 @@ const projectsData = [
     tech: ['TypeScript', 'React', 'FastAPI', 'OCR', 'Vector DB'],
     features: ['PDF/image OCR', 'Semantic search', 'Document organization', 'Batch processing', 'AI report generation'],
     github: 'https://github.com/jryahia/ai-document-processing',
-    demo: 'https://github.com/jryahia/ai-document-processing',
+    demo: 'https://jryahia.github.io/ai-document-processing/',
     status: 'done'
   },
   {
@@ -201,7 +201,7 @@ const projectsData = [
     tech: ['Python', 'FastAPI', 'OCR', 'PDF', 'LLM'],
     features: ['Batch invoice extraction', 'Italian tax compliance', 'OCR + AI fallback', 'CSV/JSON export', 'VAT detection'],
     github: 'https://github.com/jryahia/invoice-extractor',
-    demo: 'https://github.com/jryahia/invoice-extractor',
+    demo: 'https://jryahia.github.io/invoice-extractor/',
     status: 'done'
   },
   {
@@ -215,7 +215,7 @@ const projectsData = [
     tech: ['Python', 'GPT-4 Vision', 'OCR', 'FastAPI', 'SDK'],
     features: ['64-language support', 'Dish detection', 'Price extraction', 'Dietary info', 'Multilingual output'],
     github: 'https://github.com/jryahia/menu-analyzer-sdk',
-    demo: 'https://github.com/jryahia/menu-analyzer-sdk',
+    demo: 'https://jryahia.github.io/menu-analyzer-sdk/',
     status: 'done'
   },
 
@@ -231,7 +231,7 @@ const projectsData = [
     tech: ['Python', 'FastAPI', 'LLM', 'GitHub API', 'Pytest'],
     features: ['Automated PR reviews', 'Bug detection', 'Style enforcement', '77 passing tests', 'GitHub integration'],
     github: 'https://github.com/jryahia/code-review-assistant',
-    demo: 'https://github.com/jryahia/code-review-assistant',
+    demo: 'https://jryahia.github.io/code-review-assistant/',
     status: 'done'
   },
   {
@@ -245,7 +245,7 @@ const projectsData = [
     tech: ['Python', 'Flet', 'ChromaDB', 'LLM', 'RAG'],
     features: ['Document ingestion', 'RAG chatbot engine', 'Multi-LLM support', 'Project management', 'Embeddable widget'],
     github: 'https://github.com/jryahia/ai-chatbot-builder',
-    demo: 'https://github.com/jryahia/ai-chatbot-builder',
+    demo: 'https://jryahia.github.io/ai-chatbot-builder/',
     status: 'done'
   },
   {
@@ -259,7 +259,7 @@ const projectsData = [
     tech: ['Python', 'Flet', 'FastAPI', 'ChromaDB', 'LLM'],
     features: ['Advanced RAG pipeline', 'Embeddable widgets', 'Project management', 'Multi-LLM', 'API backend'],
     github: 'https://github.com/jryahia/ai-chatbot-builder-pro',
-    demo: 'https://github.com/jryahia/ai-chatbot-builder-pro',
+    demo: 'https://jryahia.github.io/ai-chatbot-builder-pro/',
     status: 'done'
   },
 
@@ -275,7 +275,7 @@ const projectsData = [
     tech: ['Python', 'Flet', 'Playwright', 'OpenAI', 'Telegram'],
     features: ['Competitor price tracking', 'Playwright stealth', 'AI analysis', 'Telegram alerts', 'Desktop dashboard'],
     github: 'https://github.com/jryahia/competitor-monitor-bot',
-    demo: 'https://github.com/jryahia/competitor-monitor-bot',
+    demo: 'https://jryahia.github.io/competitor-monitor-bot/',
     status: 'done'
   },
   {
@@ -289,7 +289,7 @@ const projectsData = [
     tech: ['Python', 'Flet', 'FastAPI', 'Social APIs', 'SQLite'],
     features: ['5 platform support', 'Content calendar', 'Auto-posting', 'Analytics dashboard', 'Team collaboration'],
     github: 'https://github.com/jryahia/social-media-scheduler',
-    demo: 'https://github.com/jryahia/social-media-scheduler',
+    demo: 'https://jryahia.github.io/social-media-scheduler/',
     status: 'done'
   },
   {
@@ -303,7 +303,7 @@ const projectsData = [
     tech: ['Python', 'Playwright', 'Pydantic', 'Async', 'httpx'],
     features: ['Autonomous booking', 'Playwright async', 'Health checks', 'Retry logic', 'Configurable'],
     github: 'https://github.com/jryahia/appointment-booker',
-    demo: 'https://github.com/jryahia/appointment-booker',
+    demo: 'https://jryahia.github.io/appointment-booker/',
     status: 'done'
   },
 
@@ -319,7 +319,7 @@ const projectsData = [
     tech: ['Python', 'Twilio', 'GPT-4o', 'FastAPI', 'SQLite'],
     features: ['6D voice profiling', 'GPT-4o-mini replies', 'Twilio integration', 'Knowledge base', 'Business auto-reply'],
     github: 'https://github.com/jryahia/whatsapp-voice-clone',
-    demo: 'https://github.com/jryahia/whatsapp-voice-clone',
+    demo: 'https://jryahia.github.io/whatsapp-voice-clone/',
     status: 'done'
   },
   {
@@ -333,7 +333,7 @@ const projectsData = [
     tech: ['Python', 'FastAPI', 'LLM', 'SQLite', 'Pydantic'],
     features: ['Intelligent recovery flow', 'LLM reasoning', 'Multi-account support', 'Security analysis', 'Step-by-step guidance'],
     github: 'https://github.com/jryahia/lost-password-ai',
-    demo: 'https://github.com/jryahia/lost-password-ai',
+    demo: 'https://jryahia.github.io/lost-password-ai/',
     status: 'done'
   },
   {
@@ -363,7 +363,7 @@ const projectsData = [
     tech: ['Python', 'tkinter', 'SQLite', 'Pandas', 'ReportLab'],
     features: ['Expense tracking', 'Tax report generation', 'Receipt management', 'Partita IVA optimized', 'Local privacy'],
     github: 'https://github.com/jryahia/dedutto',
-    demo: 'https://github.com/jryahia/dedutto',
+    demo: 'https://jryahia.github.io/dedutto/',
     status: 'done'
   },
   {
@@ -377,7 +377,7 @@ const projectsData = [
     tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'Docker'],
     features: ['Real-time analytics', 'Interactive dashboards', 'Data export', 'Docker deployment', 'Flet desktop app'],
     github: 'https://github.com/jryahia/business-analytics-dashboard',
-    demo: 'https://github.com/jryahia/business-analytics-dashboard',
+    demo: 'https://jryahia.github.io/business-analytics-dashboard/',
     status: 'done'
   },
   {
@@ -391,7 +391,7 @@ const projectsData = [
     tech: ['Python', 'FastAPI', 'LLM', 'SQLite', 'Pydantic'],
     features: ['AI room layout generation', 'Style suggestions', 'Furniture arrangement', 'Visualization', 'Design export'],
     github: 'https://github.com/jryahia/ai-room-designer',
-    demo: 'https://github.com/jryahia/ai-room-designer',
+    demo: 'https://jryahia.github.io/ai-room-designer/',
     status: 'done'
   }
 ];
