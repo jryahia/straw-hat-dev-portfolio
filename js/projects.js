@@ -670,29 +670,52 @@ function revealOnScroll(grid) {
   const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduceMotion) return;
 
+  const panel = document.getElementById('projects-content');
   const cards = grid.querySelectorAll('.treasure-card');
   cards.forEach((card, i) => {
     card.classList.add('reveal');
-    // Small cascade within each row of 5, capped at 160ms
+    // Small cascade, capped at 160ms
     card.dataset.revealDelay = (i % 5) * 40;
   });
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const card = entry.target;
-      card.style.transitionDelay = card.dataset.revealDelay + 'ms';
-      card.classList.add('revealed');
-      // Drop the delay once revealed so it never lags the hover transition
-      setTimeout(() => { card.style.transitionDelay = ''; }, 800);
-      observer.unobserve(card);
-    });
-  }, {
-    root: document.getElementById('projects-content'),
-    threshold: 0.12
-  });
+  let started = false;
+  const start = () => {
+    if (started) return;
+    started = true;
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const card = entry.target;
+        card.style.transitionDelay = card.dataset.revealDelay + 'ms';
+        card.classList.add('revealed');
+        // Drop the delay once revealed so it never lags the hover transition
+        setTimeout(() => { card.style.transitionDelay = ''; }, 800);
+        observer.unobserve(card);
+      });
+    }, { root: panel, threshold: 0.12 });
+    cards.forEach(card => observer.observe(card));
+  };
 
-  cards.forEach(card => observer.observe(card));
+  // The panel is offscreen-but-measurable until it gets .active, so wait for it:
+  // otherwise the first rows reveal while the section is still hidden.
+  if (!panel || panel.classList.contains('active') || !('MutationObserver' in window)) {
+    start();
+  } else {
+    const watcher = new MutationObserver(() => {
+      if (panel.classList.contains('active')) {
+        watcher.disconnect();
+        start();
+      }
+    });
+    watcher.observe(panel, { attributes: true, attributeFilter: ['class'] });
+    // Fail-safe: if section switching never came up at all, reveal anyway
+    // rather than leaving the cards permanently hidden.
+    setTimeout(() => {
+      if (started || document.querySelector('.section-content.active')) return;
+      watcher.disconnect();
+      start();
+    }, 3000);
+  }
 }
 
 function renderProjects() {
