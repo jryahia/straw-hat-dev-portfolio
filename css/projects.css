@@ -230,6 +230,14 @@
     position: relative;
 }
 
+/* Scroll reveal — the .reveal class is added by revealOnScroll() in js/projects.js,
+   so cards stay visible if JS is unavailable. Only the pre-reveal state is styled,
+   which leaves the hover lift in style.css untouched once a card is revealed. */
+#projects-grid .treasure-card.reveal:not(.revealed) {
+    opacity: 0;
+    transform: translateY(24px);
+}
+
 .card-image-container {
     width: 100%;
     height: 200px;
@@ -549,6 +557,12 @@
     .card-overlay {
         animation: none !important;
         transition: none !important;
+    }
+
+    /* Safety net: never leave a card hidden when motion is reduced */
+    #projects-grid .treasure-card.reveal:not(.revealed) {
+        opacity: 1;
+        transform: none;
     }
 }
 

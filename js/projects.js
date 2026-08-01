@@ -663,6 +663,38 @@ function closeProjectModal() {
   }
 }
 
+// Fade + slide-up the treasure cards as they scroll into the projects panel.
+// #projects-content is the scroll container, so it has to be the observer root.
+function revealOnScroll(grid) {
+  if (!grid || !('IntersectionObserver' in window)) return;
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) return;
+
+  const cards = grid.querySelectorAll('.treasure-card');
+  cards.forEach((card, i) => {
+    card.classList.add('reveal');
+    // Small cascade within each row of 5, capped at 160ms
+    card.dataset.revealDelay = (i % 5) * 40;
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const card = entry.target;
+      card.style.transitionDelay = card.dataset.revealDelay + 'ms';
+      card.classList.add('revealed');
+      // Drop the delay once revealed so it never lags the hover transition
+      setTimeout(() => { card.style.transitionDelay = ''; }, 800);
+      observer.unobserve(card);
+    });
+  }, {
+    root: document.getElementById('projects-content'),
+    threshold: 0.12
+  });
+
+  cards.forEach(card => observer.observe(card));
+}
+
 function renderProjects() {
   const grid = document.getElementById('projects-grid');
   if (!grid) return;
@@ -681,6 +713,7 @@ function renderProjects() {
     </div>
   `).join('');
   cachedTreasureCards = grid.querySelectorAll('.treasure-card');
+  revealOnScroll(grid);
 
   // Update bounty stat count
   const bountyStat = document.querySelector('.stat-value');
