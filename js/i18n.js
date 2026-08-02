@@ -123,7 +123,7 @@ const translations = {
         },
         home: {
             wanted: 'WANTED',
-            tagline: 'Charting the Grand Line of full-stack development with <strong>React</strong>, <strong>Node.js</strong>, and <strong>GSAP</strong> — crafting digital experiences that set sail beyond the horizon.',
+            tagline: 'I build AI-powered automation that runs real businesses. FastAPI backends that talk to GoHighLevel, Make, n8n, and HubSpot; LLM agents that qualify leads, book calls, and answer customers over WhatsApp; Python tools that turn invoices, documents, and spreadsheets into clean data. Full-stack when the job needs it, Docker-included so every ship deploys anywhere — the same kind of system that quietly powers a growing agency\'s clients.',
             exploreBtn: 'Explore My Journey',
             stats: {
                 years: 'Years',
@@ -136,25 +136,32 @@ const translations = {
             title: 'The <span>Dev</span> Trip',
             voyage1: {
                 title: 'East Blue — The Craft Begins',
-                desc: 'Built the foundation. Every legendary dev starts with curiosity, clean code, and zero sleep.'
+                desc: 'Learned to build. Python, APIs, and the discipline of code that doesn\'t break.'
             },
             voyage2: {
                 title: 'Grand Line — The Grind',
-                desc: 'Pushed through complex projects, real clients, and brutal deadlines. Every bug was a boss fight.'
+                desc: 'Shipped for real people: client automations for GoHighLevel, HubSpot, Make, and n8n. Every deadline a boss fight won.'
             },
             voyage3: {
                 title: 'New World — Present',
-                desc: 'Now shipping full-stack apps. React is my sword, clean architecture my Haki.'
+                desc: 'Now: AI agents that work an inbox, book a call, and write a report — a 40+ project treasure vault to prove it.'
             }
         },
         skills: {
-            react: 'React',
-            javascript: 'JavaScript',
-            nodejs: 'Node.js',
-            tailwind: 'TailwindCSS',
-            gsap: 'GSAP',
-            threejs: 'Three.js',
-            python: 'Python'
+            python: 'Python',
+            fastapi: 'FastAPI',
+            sqlalchemy: 'SQLAlchemy',
+            database: 'Postgres · SQLite',
+            async_python: 'Async Python',
+            llm: 'LLM Integration',
+            agents: 'AI Agents',
+            chatbots: 'Chatbots',
+            business_automation: 'GHL · Make · n8n · HubSpot',
+            whatsapp: 'WhatsApp / SMS',
+            document_processing: 'Document Processing',
+            docker: 'Docker',
+            pytest: 'pytest',
+            flet: 'Flet'
         },
         projects: {
             label: '💎 Treasure Vault',
@@ -192,7 +199,7 @@ const translations = {
         },
         home: {
             wanted: 'RECHERCHÉ',
-            tagline: 'Naviguer sur la Grand Line du développement full-stack avec <strong>React</strong>, <strong>Node.js</strong> et <strong>GSAP</strong> — créer des expériences digitales qui prennent le large.',
+            tagline: 'Je construis des automatisations propulsées par l\'IA qui font tourner de vraies entreprises. Des backends FastAPI qui connectent GoHighLevel, Make, n8n et HubSpot ; des agents LLM qui qualifient des leads, réservent des appels et répondent aux clients sur WhatsApp ; des outils Python qui transforment factures, documents et tableurs en données propres. Full-stack quand le besoin s\'en fait sentir, Docker inclus pour que chaque navire se déploie partout — le type même de système qui fait tourner en silence les clients d\'une agence en pleine croissance.',
             exploreBtn: 'Explorer Mon Parcours',
             stats: {
                 years: 'Années',
@@ -204,26 +211,33 @@ const translations = {
             label: '📜 Journal du Capitaine',
             title: 'Le <span>Trip</span> Dev',
             voyage1: {
-                title: 'East Blue — Les Débuts',
-                desc: 'Construire les fondations. Chaque dev légendaire commence avec curiosité, code propre et zéro sommeil.'
+                title: 'East Blue — Le Métier Commence',
+                desc: 'Apprendre à construire. Python, les API et la discipline d\'un code qui ne casse pas.'
             },
             voyage2: {
-                title: 'Grand Line — Le Combat',
-                desc: 'Traverser des projets complexes, vrais clients et deadlines brutales. Chaque bug était un boss fight.'
+                title: 'Grand Line — L\'Effort',
+                desc: 'Livré pour de vraies personnes : automatisations client pour GoHighLevel, HubSpot, Make et n8n. Chaque deadline, un boss fight gagné.'
             },
             voyage3: {
-                title: 'Nouveau Monde — Présent',
-                desc: 'Maintenant je livre des apps full-stack. React est mon épée, architecture propre mon Haki.'
+                title: 'Nouveau Monde — Le Présent',
+                desc: 'Maintenant, des agents IA qui gèrent une boîte mail, réservent un appel et rédigent un rapport — un coffre de 40+ projets pour le prouver.'
             }
         },
         skills: {
-            react: 'React',
-            javascript: 'JavaScript',
-            nodejs: 'Node.js',
-            tailwind: 'TailwindCSS',
-            gsap: 'GSAP',
-            threejs: 'Three.js',
-            python: 'Python'
+            python: 'Python',
+            fastapi: 'FastAPI',
+            sqlalchemy: 'SQLAlchemy',
+            database: 'Postgres · SQLite',
+            async_python: 'Async Python',
+            llm: 'LLM Integration',
+            agents: 'AI Agents',
+            chatbots: 'Chatbots',
+            business_automation: 'GHL · Make · n8n · HubSpot',
+            whatsapp: 'WhatsApp / SMS',
+            document_processing: 'Document Processing',
+            docker: 'Docker',
+            pytest: 'pytest',
+            flet: 'Flet'
         },
         projects: {
             label: '💎 Coffre aux Trésors',
@@ -261,7 +275,7 @@ const translations = {
         },
         home: {
             wanted: 'RICERCATO',
-            tagline: 'Navigare la Grand Line dello sviluppo full-stack con <strong>React</strong>, <strong>Node.js</strong> e <strong>GSAP</strong> — creare esperienze digitali che salpano oltre l\'orizzonte.',
+            tagline: 'Costruisco automatizzazioni basate sull\'IA che fanno funzionare aziende vere. Backend FastAPI che dialogano con GoHighLevel, Make, n8n e HubSpot ; agenti LLM che qualificano lead, prenotano chiamate e rispondono ai clienti su WhatsApp ; strumenti Python che trasformano fatture, documenti e fogli di calcolo in dati puliti. Full-stack quando serve, Docker incluso così ogni nave si deploya ovunque — il tipo di sistema che fa funzionare in silenzio i clienti di un\'agenzia in crescita.',
             exploreBtn: 'Esplora Il Mio Viaggio',
             stats: {
                 years: 'Anni',
@@ -273,26 +287,33 @@ const translations = {
             label: '📜 Diario del Capitano',
             title: 'Il <span>Trip</span> Dev',
             voyage1: {
-                title: 'East Blue — L\'Inizio',
-                desc: 'Costruire le fondamenta. Ogni dev leggendario inizia con curiosità, codice pulito e zero sonno.'
+                title: 'East Blue — L\'Arte Comincia',
+                desc: 'Imparare a costruire. Python, API e la disciplina di un codice che non si rompe.'
             },
             voyage2: {
-                title: 'Grand Line — La Lotta',
-                desc: 'Superare progetti complessi, clienti reali e scadenze brutali. Ogni bug era un boss fight.'
+                title: 'Grand Line — La Fatica',
+                desc: 'Consegnato per persone reali: automazioni client per GoHighLevel, HubSpot, Make e n8n. Ogni scadenza, un boss fight vinto.'
             },
             voyage3: {
-                title: 'Nuovo Mondo — Presente',
-                desc: 'Ora consegno app full-stack. React è la mia spada, architettura pulita il mio Haki.'
+                title: 'Nuovo Mondo — Il Presente',
+                desc: 'Ora agenti IA che gestiscono una casella, prenotano una chiamata e scrivono un report — un forziere di 40+ progetti a provarlo.'
             }
         },
         skills: {
-            react: 'React',
-            javascript: 'JavaScript',
-            nodejs: 'Node.js',
-            tailwind: 'TailwindCSS',
-            gsap: 'GSAP',
-            threejs: 'Three.js',
-            python: 'Python'
+            python: 'Python',
+            fastapi: 'FastAPI',
+            sqlalchemy: 'SQLAlchemy',
+            database: 'Postgres · SQLite',
+            async_python: 'Async Python',
+            llm: 'LLM Integration',
+            agents: 'AI Agents',
+            chatbots: 'Chatbots',
+            business_automation: 'GHL · Make · n8n · HubSpot',
+            whatsapp: 'WhatsApp / SMS',
+            document_processing: 'Document Processing',
+            docker: 'Docker',
+            pytest: 'pytest',
+            flet: 'Flet'
         },
         projects: {
             label: '💎 Forziere dei Tesori',
@@ -330,7 +351,7 @@ const translations = {
         },
         home: {
             wanted: 'GESUCHT',
-            tagline: 'Die Grand Line der Full-Stack-Entwicklung mit <strong>React</strong>, <strong>Node.js</strong> und <strong>GSAP</strong> navigieren — digitale Erlebnisse schaffen, die über den Horizont hinaussegeln.',
+            tagline: 'Ich baue KI-gestützte Automatisierung, die echte Unternehmen am Laufen hält. FastAPI-Backends, die GoHighLevel, Make, n8n und HubSpot verbinden; LLM-Agenten, die Leads qualifizieren, Anrufe buchen und Kunden über WhatsApp beantworten; Python-Tools, die Rechnungen, Dokumente und Tabellen in saubere Daten verwandeln. Full-Stack, wenn es die Aufgabe verlangt, Docker inklusive, damit jedes Schiff überall deployed wird — die Art von System, die im Hintergrund die Kunden einer wachsenden Agentur versorgt.',
             exploreBtn: 'Meine Reise Erkunden',
             stats: {
                 years: 'Jahre',
@@ -342,26 +363,33 @@ const translations = {
             label: '📜 Kapitäns Logbuch',
             title: 'Die <span>Dev</span> Trip',
             voyage1: {
-                title: 'East Blue — Der Anfang',
-                desc: 'Das Fundament bauen. Jeder legendäre Dev beginnt mit Neugier, sauberem Code und null Schlaf.'
+                title: 'East Blue — Das Handwerk Beginnt',
+                desc: 'Bauen gelernt. Python, APIs und die Disziplin von Code, der nicht bricht.'
             },
             voyage2: {
                 title: 'Grand Line — Der Kampf',
-                desc: 'Komplexe Projekte, echte Kunden und brutale Deadlines durchstehen. Jeder Bug war ein Boss-Kampf.'
+                desc: 'Für echte Menschen geliefert: Kunden-Automatisierungen für GoHighLevel, HubSpot, Make und n8n. Jede Deadline ein gewonnener Boss-Kampf.'
             },
             voyage3: {
                 title: 'Neue Welt — Gegenwart',
-                desc: 'Jetzt liefere ich Full-Stack-Apps. React ist mein Schwert, saubere Architektur mein Haki.'
+                desc: 'Jetzt KI-Agenten, die ein Postfach bearbeiten, einen Anruf buchen und einen Bericht schreiben — ein Schatzgewölbe mit 40+ Projekten als Beweis.'
             }
         },
         skills: {
-            react: 'React',
-            javascript: 'JavaScript',
-            nodejs: 'Node.js',
-            tailwind: 'TailwindCSS',
-            gsap: 'GSAP',
-            threejs: 'Three.js',
-            python: 'Python'
+            python: 'Python',
+            fastapi: 'FastAPI',
+            sqlalchemy: 'SQLAlchemy',
+            database: 'Postgres · SQLite',
+            async_python: 'Async Python',
+            llm: 'LLM Integration',
+            agents: 'AI Agents',
+            chatbots: 'Chatbots',
+            business_automation: 'GHL · Make · n8n · HubSpot',
+            whatsapp: 'WhatsApp / SMS',
+            document_processing: 'Document Processing',
+            docker: 'Docker',
+            pytest: 'pytest',
+            flet: 'Flet'
         },
         projects: {
             label: '💎 Schatzkammer',
@@ -399,7 +427,7 @@ const translations = {
         },
         home: {
             wanted: 'РАЗЫСКИВАЕТСЯ',
-            tagline: 'Прокладывая путь по Гранд Лайн full-stack разработки с <strong>React</strong>, <strong>Node.js</strong> и <strong>GSAP</strong> — создавая цифровые впечатления, уплывающие за горизонт.',
+            tagline: 'Я создаю ИИ-автоматизацию, которая по-настоящему поддерживает бизнес. Backend на FastAPI, подключающий GoHighLevel, Make, n8n и HubSpot; LLM-агенты, которые квалифицируют лиды, бронируют звонки и отвечают клиентам в WhatsApp; Python-инструменты, превращающие счета, документы и таблицы в чистые данные. Full-stack, когда это нужно, и Docker, чтобы каждый корабль разворачивался где угодно — та самая система, что тихо обслуживает клиентов растущего агентства.',
             exploreBtn: 'Исследовать Мой Путь',
             stats: {
                 years: 'Лет',
@@ -412,25 +440,32 @@ const translations = {
             title: 'The <span>Dev</span> Trip',
             voyage1: {
                 title: 'Ист Блю — Начало Ремесла',
-                desc: 'Построил фундамент. Каждый легендарный разработчик начинает с любопытства, чистого кода и нулевого сна.'
+                desc: 'Научился строить. Python, API и дисциплина кода, который не ломается.'
             },
             voyage2: {
-                title: 'Гранд Лайн — Борьба',
-                desc: 'Прошёл сложные проекты, реальных клиентов и жёсткие дедлайны. Каждый баг был боссом.'
+                title: 'Гранд Лайн — Упорство',
+                desc: 'Сделано для реальных людей: клиентская автоматизация для GoHighLevel, HubSpot, Make и n8n. Каждый дедлайн — выигранный босс.'
             },
             voyage3: {
                 title: 'Новый Мир — Настоящее',
-                desc: 'Теперь выпускаю full-stack приложения. React — мой меч, чистая архитектура — мой Хаки.'
+                desc: 'Теперь ИИ-агенты, которые работают с почтой, бронируют звонки и пишут отчёты — сейф с 40+ проектами в доказательство.'
             }
         },
         skills: {
-            react: 'React',
-            javascript: 'JavaScript',
-            nodejs: 'Node.js',
-            tailwind: 'TailwindCSS',
-            gsap: 'GSAP',
-            threejs: 'Three.js',
-            python: 'Python'
+            python: 'Python',
+            fastapi: 'FastAPI',
+            sqlalchemy: 'SQLAlchemy',
+            database: 'Postgres · SQLite',
+            async_python: 'Async Python',
+            llm: 'LLM Integration',
+            agents: 'AI Agents',
+            chatbots: 'Chatbots',
+            business_automation: 'GHL · Make · n8n · HubSpot',
+            whatsapp: 'WhatsApp / SMS',
+            document_processing: 'Document Processing',
+            docker: 'Docker',
+            pytest: 'pytest',
+            flet: 'Flet'
         },
         projects: {
             label: '💎 Хранилище Сокровищ',
@@ -468,7 +503,7 @@ const translations = {
         },
         home: {
             wanted: '手配書',
-            tagline: '<strong>React</strong>、<strong>Node.js</strong>、<strong>GSAP</strong>でフルスタック開発のグランドラインを航海し、地平線の彼方へ向かうデジタル体験を創造します。',
+            tagline: '実在のビジネスを動かすAI自動化を作っています。GoHighLevel、Make、n8n、HubSpotにつなぐFastAPIバックエンド; リードを評価し、電話を予約し、WhatsAppで顧客に対応するLLMエージェント; 請求書・書類・表計算をクリーンなデータに変えるPythonツール。必要な時はフルスタック、Docker込みでどこにでも配備できる船 — 成長するエージェンシーのクライアントを静かに支えるまさにそういうシステム。',
             exploreBtn: '私の旅を探索',
             stats: {
                 years: '年',
@@ -480,26 +515,33 @@ const translations = {
             label: '📜 船長の航海日誌',
             title: '<span>開発者</span>のTrip',
             voyage1: {
-                title: 'イーストブルー — 技術の始まり',
-                desc: '基礎を築きました。伝説の開発者は皆、好奇心、綺麗なコード、そしてゼロ睡眠から始まります。'
+                title: '東の海 — 技術のはじまり',
+                desc: '作ることを学んだ。Python、API、そして壊れないコードの規律。'
             },
             voyage2: {
                 title: 'グランドライン — 苦闘',
-                desc: '複雑なプロジェクト、実際のクライアント、厳しい締め切りを乗り越えました。すべてのバグがボス戦でした。'
+                desc: '実在のクライアントのために納品：GoHighLevel、HubSpot、Make、n8nの自動化。すべての締め切りは勝ち取ったボス戦。'
             },
             voyage3: {
-                title: 'ニューワールド — 現在',
-                desc: '今はフルスタックアプリを出荷しています。Reactは私の剣、綺麗なアーキテクチャは私の覇気です。'
+                title: '新世界 — 現在',
+                desc: '今は受信箱を捌き、電話を予約し、レポートを書くAIエージェント — 40以上のプロジェクトの宝の山が証拠だ。'
             }
         },
         skills: {
-            react: 'React',
-            javascript: 'JavaScript',
-            nodejs: 'Node.js',
-            tailwind: 'TailwindCSS',
-            gsap: 'GSAP',
-            threejs: 'Three.js',
-            python: 'Python'
+            python: 'Python',
+            fastapi: 'FastAPI',
+            sqlalchemy: 'SQLAlchemy',
+            database: 'Postgres · SQLite',
+            async_python: 'Async Python',
+            llm: 'LLM Integration',
+            agents: 'AI Agents',
+            chatbots: 'Chatbots',
+            business_automation: 'GHL · Make · n8n · HubSpot',
+            whatsapp: 'WhatsApp / SMS',
+            document_processing: 'Document Processing',
+            docker: 'Docker',
+            pytest: 'pytest',
+            flet: 'Flet'
         },
         projects: {
             label: '💎 宝物庫',
@@ -537,7 +579,7 @@ const translations = {
         },
         home: {
             wanted: 'مطلوب',
-            tagline: 'الإبحار في الخط الكبير لتطوير Full-Stack مع <strong>React</strong> و <strong>Node.js</strong> و <strong>GSAP</strong> — صناعة تجارب رقمية تبحر إلى ما وراء الأفق.',
+            tagline: 'أبني أتمتة مبنية على الذكاء الاصطناعي تُشغّل أعمالاً حقيقية. خوادم FastAPI تتصل بـ GoHighLevel وMake وn8n وHubSpot؛ وكلاء LLM يقيّمون العملاء المحتملين ويحجزون المكالمات ويردّون على العملاء عبر WhatsApp؛ أدوات Python تحوّل الفواتير والمستندات وجداول البيانات إلى بيانات نظيفة. Full-stack عند الحاجة، وDocker مضمونة ليُنشر أي سفينة في أي مكان — تماماً النظام الذي يُشغّل بهدوء عملاءَ وكالةٍ نامية.',
             exploreBtn: 'استكشف رحلتي',
             stats: {
                 years: 'سنوات',
@@ -549,26 +591,33 @@ const translations = {
             label: '📜 سجل القبطان',
             title: 'رحلة <span>الديف</span>',
             voyage1: {
-                title: 'البحر الشرقي — بداية الحرفة',
-                desc: 'بناء الأساس. كل مطور أسطوري يبدأ بالفضول، كود نظيف، وصفر نوم.'
+                title: 'الشرق الأزرق — بداية الحرفة',
+                desc: 'تعلّمت البناء. Python وAPIs وانضباط الكود الذي لا ينكسر.'
             },
             voyage2: {
-                title: 'الخط الكبير — الكفاح',
-                desc: 'تجاوزت مشاريع معقدة، عملاء حقيقيين، ومواعيد نهائية قاسية. كل خطأ برمجي كان معركة زعيم.'
+                title: 'غراند لاين — الجهد',
+                desc: 'سُلّمت لأشخاص حقيقيين: أتمتة للعملاء عبر GoHighLevel وHubSpot وMake وn8n. كل موعد تسليم معركة بوس مكتسبة.'
             },
             voyage3: {
                 title: 'العالم الجديد — الحاضر',
-                desc: 'الآن أطلق تطبيقات Full-Stack. React هو سيفي، البنية النظيفة هي الهاكي الخاص بي.'
+                desc: 'الآن وكلاء ذكاء اصطناعي يديرون البريد، يحجزون مكالمة، ويكتبون تقريراً — خزينة أكثر من 40 مشروعاً تثبت ذلك.'
             }
         },
         skills: {
-            react: 'React',
-            javascript: 'JavaScript',
-            nodejs: 'Node.js',
-            tailwind: 'TailwindCSS',
-            gsap: 'GSAP',
-            threejs: 'Three.js',
-            python: 'Python'
+            python: 'Python',
+            fastapi: 'FastAPI',
+            sqlalchemy: 'SQLAlchemy',
+            database: 'Postgres · SQLite',
+            async_python: 'Async Python',
+            llm: 'LLM Integration',
+            agents: 'AI Agents',
+            chatbots: 'Chatbots',
+            business_automation: 'GHL · Make · n8n · HubSpot',
+            whatsapp: 'WhatsApp / SMS',
+            document_processing: 'Document Processing',
+            docker: 'Docker',
+            pytest: 'pytest',
+            flet: 'Flet'
         },
         projects: {
             label: '💎 خزينة الكنوز',
