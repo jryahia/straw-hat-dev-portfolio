@@ -7,6 +7,7 @@ let islands=[],characters=[],coins=[],clouds=[];
 let currentSection=0;
 const totalSections=4;
 let isTransitioning=false;
+let pendingSection=null;
 let time=0;
 let lastTime=0;
 let mouseX=0,mouseY=0;
@@ -36,14 +37,23 @@ const shipPositions=[
 ];
 
 function navigateToSection(index){
-if(index<0||index>=totalSections||isTransitioning)return;
+if(index<0||index>=totalSections)return;
+// A click made during the 2s camera move used to be swallowed. Remember the
+// latest target instead and run it as soon as the current transition ends.
+if(isTransitioning){pendingSection=index;return;}
 isTransitioning=true;
 currentSection=index;
 updateUI();
 animateCamera(scenePositions[index]);
 animateShip(shipPositions[index]);
 updateCharacter();
-setTimeout(()=>isTransitioning=false,ANIMATION_DURATION+TRANSITION_BUFFER);
+setTimeout(()=>{
+isTransitioning=false;
+if(pendingSection===null)return;
+const next=pendingSection;
+pendingSection=null;
+if(next!==currentSection)navigateToSection(next);
+},ANIMATION_DURATION+TRANSITION_BUFFER);
 }
 
 function updateUI(){
@@ -500,12 +510,35 @@ if(e.key==='ArrowDown'||e.key==='ArrowRight')navigateToSection(currentSection+1)
 if(e.key==='ArrowUp'||e.key==='ArrowLeft')navigateToSection(currentSection-1);
 });
 
-let touchY=0;
-window.addEventListener('touchstart',e=>touchY=e.touches[0].clientY);
+let touchY=0,touchX=0,touchScrollTop=0;
+function getProjectsPanel(){return document.getElementById('projects-content');}
+window.addEventListener('touchstart',e=>{
+const t=e.touches[0];
+touchY=t.clientY;
+touchX=t.clientX;
+const panel=currentSection===2?getProjectsPanel():null;
+touchScrollTop=panel?panel.scrollTop:0;
+},{passive:true});
 window.addEventListener('touchend',e=>{
-const diff=touchY-e.changedTouches[0].clientY;
-if(Math.abs(diff)>50)navigateToSection(currentSection+(diff>0?1:-1));
-});
+if(isTransitioning)return;
+if(document.body.classList.contains('modal-open'))return;
+const t=e.changedTouches[0];
+const diff=touchY-t.clientY;
+if(Math.abs(diff)<=50)return;
+if(Math.abs(diff)<=Math.abs(touchX-t.clientX))return;
+// Same rule as the wheel handler: the gallery gets the gesture first, and
+// only an overscroll past its top/bottom switches section.
+if(currentSection===2){
+const panel=getProjectsPanel();
+if(panel){
+if(panel.scrollTop!==touchScrollTop)return;
+const atTop=panel.scrollTop<=5;
+const atBottom=panel.scrollTop+panel.clientHeight>=panel.scrollHeight-5;
+if((diff>0&&!atBottom)||(diff<0&&!atTop))return;
+}
+}
+navigateToSection(currentSection+(diff>0?1:-1));
+},{passive:true});
 
 document.querySelectorAll('.nav-links a').forEach((link,i)=>{
 link.addEventListener('click',e=>{

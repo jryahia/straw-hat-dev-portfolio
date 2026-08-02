@@ -516,12 +516,48 @@ nav {
     padding: 0 8%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.8s ease, visibility 0.8s ease;
+    /* Leave quickly so the outgoing panel is gone before the next one arrives
+       (a symmetric long crossfade double-exposes two headings). */
+    transform: translateY(14px);
+    transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s;
 }
 
+/* Enter late and settle at ~2s, matching ANIMATION_DURATION in js/script.js,
+   so the content arrives with the camera instead of popping in at 0.8s while
+   the world is still gliding. */
 .section-content.active {
     opacity: 1;
     visibility: visible;
+    transform: none;
+    transition: opacity 1.05s ease 0.55s,
+                transform 1.45s cubic-bezier(0.16, 1, 0.3, 1) 0.55s,
+                visibility 0s;
+}
+
+/* Only the visible panel takes pointer input. Children opt in individually
+   (e.g. .treasure-grid), so the descendants need covering too — otherwise the
+   outgoing panel keeps swallowing clicks/scroll while it fades out. */
+.section-content:not(.active),
+.section-content:not(.active) * {
+    pointer-events: none;
+}
+
+/* The gallery is a scroll container, so the whole panel has to be hit-testable
+   for touch/wheel scrolling to work over the header, padding and card gaps —
+   not just over the cards themselves. */
+#projects-content.active {
+    pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-content {
+        transform: none;
+        transition: opacity 0.3s ease, visibility 0.3s;
+    }
+    .section-content.active {
+        transform: none;
+        transition: opacity 0.3s ease, visibility 0s;
+    }
 }
 
 /* Home Section */

@@ -663,58 +663,110 @@ function closeProjectModal() {
   }
 }
 
+// Runs cb now if the projects panel is already active, and again every time it
+// gains .active. Section switching only toggles the class — the panel and its
+// cards stay in the DOM — so re-entry has to be handled explicitly.
+function onProjectsPanelActive(panel, cb) {
+  if (!panel) return;
+  let wasActive = panel.classList.contains('active');
+  if (wasActive) cb();
+  if (!('MutationObserver' in window)) return;
+  const watcher = new MutationObserver(() => {
+    const isActive = panel.classList.contains('active');
+    if (isActive && !wasActive) cb();
+    wasActive = isActive;
+  });
+  watcher.observe(panel, { attributes: true, attributeFilter: ['class'] });
+}
+
 // Fade + slide-up the treasure cards as they scroll into the projects panel.
 // #projects-content is the scroll container, so it has to be the observer root.
 function revealOnScroll(grid) {
-  if (!grid || !('IntersectionObserver' in window)) return;
-  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduceMotion) return;
-
   const panel = document.getElementById('projects-content');
-  const cards = grid.querySelectorAll('.treasure-card');
+  const cards = grid ? Array.prototype.slice.call(grid.querySelectorAll('.treasure-card')) : [];
+
+  // The panel keeps its scrollTop across section switches, so returning to it
+  // used to drop you mid-gallery. Always land at the top.
+  const resetScroll = () => {
+    if (!panel) return;
+    const prev = panel.style.scrollBehavior;
+    panel.style.scrollBehavior = 'auto'; // beat scroll-behavior:smooth (style.css)
+    panel.scrollTop = 0;
+    panel.style.scrollBehavior = prev;
+  };
+
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!grid || reduceMotion || !('IntersectionObserver' in window)) {
+    onProjectsPanelActive(panel, resetScroll);
+    return;
+  }
+
   cards.forEach((card, i) => {
     card.classList.add('reveal');
     // Small cascade, capped at 160ms
     card.dataset.revealDelay = (i % 5) * 40;
   });
 
+  let observer = null;
   let started = false;
+
+  // The panel itself only starts fading in 550ms after it goes .active
+  // (style.css), so the on-entry cascade is offset to land inside that fade
+  // instead of finishing while the panel is still invisible.
+  const ENTRY_DELAY = 550;
+
+  const revealCard = (card, obs, baseDelay) => {
+    const base = baseDelay || 0;
+    card.style.transitionDelay = (base + Number(card.dataset.revealDelay || 0)) + 'ms';
+    card.classList.add('revealed');
+    // Drop the delay once revealed so it never lags the hover transition
+    setTimeout(() => { card.style.transitionDelay = ''; }, 800 + base);
+    if (obs) obs.unobserve(card);
+  };
+
+  // Anything already inside the panel's viewport when it opens must not wait for
+  // a scroll event — that is what left cards stuck at opacity 0 on re-entry.
+  const revealInView = () => {
+    if (!panel) return;
+    const view = panel.getBoundingClientRect();
+    cards.forEach(card => {
+      if (card.classList.contains('revealed')) return;
+      const r = card.getBoundingClientRect();
+      if (!r.height) return; // filtered out of the grid
+      if (r.top < view.bottom && r.bottom > view.top) revealCard(card, observer, ENTRY_DELAY);
+    });
+  };
+
+  // Re-arm from a clean slate on every activation: the observer unobserves each
+  // card as it reveals, so a returning visitor needs every card observed again.
   const start = () => {
-    if (started) return;
     started = true;
-    const observer = new IntersectionObserver(entries => {
+    if (observer) observer.disconnect();
+    cards.forEach(card => {
+      card.classList.remove('revealed');
+      card.style.transitionDelay = '';
+    });
+    observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const card = entry.target;
-        card.style.transitionDelay = card.dataset.revealDelay + 'ms';
-        card.classList.add('revealed');
-        // Drop the delay once revealed so it never lags the hover transition
-        setTimeout(() => { card.style.transitionDelay = ''; }, 800);
-        observer.unobserve(card);
+        if (entry.isIntersecting) revealCard(entry.target, obs);
       });
     }, { root: panel, threshold: 0.12 });
     cards.forEach(card => observer.observe(card));
+    requestAnimationFrame(revealInView);
   };
 
   // The panel is offscreen-but-measurable until it gets .active, so wait for it:
   // otherwise the first rows reveal while the section is still hidden.
-  if (!panel || panel.classList.contains('active') || !('MutationObserver' in window)) {
+  onProjectsPanelActive(panel, () => {
+    resetScroll();
     start();
-  } else {
-    const watcher = new MutationObserver(() => {
-      if (panel.classList.contains('active')) {
-        watcher.disconnect();
-        start();
-      }
-    });
-    watcher.observe(panel, { attributes: true, attributeFilter: ['class'] });
-    // Fail-safe: if section switching never came up at all, reveal anyway
-    // rather than leaving the cards permanently hidden.
-    setTimeout(() => {
-      if (started || document.querySelector('.section-content.active')) return;
-      watcher.disconnect();
-      start();
-    }, 3000);
+  });
+
+  // Fail-safe: if there is nothing to hook activation on (panel missing, or no
+  // MutationObserver support and the panel starts inactive), reveal anyway
+  // rather than leaving the cards permanently hidden.
+  if (!panel || !('MutationObserver' in window)) {
+    setTimeout(() => { if (!started) start(); }, 3000);
   }
 }
 
