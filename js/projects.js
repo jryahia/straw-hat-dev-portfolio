@@ -2,6 +2,7 @@ const projectsData = [
   // ===== LUFFY'S TREASURE — Flagship Projects =====
   {
     id: 1,
+    category: 'ai',
     character: '🧠',
     bounty: '⭐ LUFFY\'S TREASURE',
     name: 'Agent Orchestrator',
@@ -16,6 +17,7 @@ const projectsData = [
   },
   {
     id: 2,
+    category: 'ai',
     character: '📊',
     bounty: '⭐ LUFFY\'S TREASURE',
     name: 'Data Enricher',
@@ -30,6 +32,7 @@ const projectsData = [
   },
   {
     id: 3,
+    category: 'ai',
     character: '🤖',
     bounty: '⭐ LUFFY\'S TREASURE',
     name: 'BrowserBot',
@@ -46,6 +49,7 @@ const projectsData = [
   // ===== ZORO'S TREASURE — Powerful Tools =====
   {
     id: 4,
+    category: 'automation',
     character: '💳',
     bounty: '🔥 ZORO\'S TREASURE',
     name: 'Wallet Analyzer',
@@ -60,6 +64,7 @@ const projectsData = [
   },
   {
     id: 5,
+    category: 'automation',
     character: '🕷️',
     bounty: '🔥 ZORO\'S TREASURE',
     name: 'Scraper Platform',
@@ -74,6 +79,7 @@ const projectsData = [
   },
   {
     id: 6,
+    category: 'automation',
     character: '⚡',
     bounty: '🔥 ZORO\'S TREASURE',
     name: 'n8n Workflow Agent',
@@ -90,6 +96,7 @@ const projectsData = [
   // ===== NAMI'S TREASURE — Financial / Crypto =====
   {
     id: 7,
+    category: 'ai',
     character: '🪙',
     bounty: '💰 NAMI\'S TREASURE',
     name: 'Crypto & Polymarket Bot',
@@ -104,6 +111,7 @@ const projectsData = [
   },
   {
     id: 8,
+    category: 'automation',
     character: '🐋',
     bounty: '💰 NAMI\'S TREASURE',
     name: 'Smart Wallet Tracker',
@@ -118,6 +126,7 @@ const projectsData = [
   },
   {
     id: 9,
+    category: 'automation',
     character: '🚀',
     bounty: '💰 NAMI\'S TREASURE',
     name: 'Meme Coin Scanner',
@@ -134,6 +143,7 @@ const projectsData = [
   // ===== SANJI'S TREASURE — Business / Web =====
   {
     id: 10,
+    category: 'web',
     character: '🍝',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'La Bontà Ristorante',
@@ -148,6 +158,7 @@ const projectsData = [
   },
   {
     id: 11,
+    category: 'web',
     character: '🏪',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'E-Commerce System',
@@ -162,6 +173,7 @@ const projectsData = [
   },
   {
     id: 12,
+    category: 'web',
     character: '🏠',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'AffittoBot',
@@ -178,6 +190,7 @@ const projectsData = [
   // ===== CHOPPER'S TREASURE — AI / Document Processing =====
   {
     id: 13,
+    category: 'ai',
     character: '📄',
     bounty: '🌟 CHOPPER\'S TREASURE',
     name: 'AI Document Processor',
@@ -192,6 +205,7 @@ const projectsData = [
   },
   {
     id: 14,
+    category: 'ai',
     character: '📑',
     bounty: '🌟 CHOPPER\'S TREASURE',
     name: 'Invoice Extractor',
@@ -206,6 +220,7 @@ const projectsData = [
   },
   {
     id: 15,
+    category: 'ai',
     character: '🍽️',
     bounty: '🌟 CHOPPER\'S TREASURE',
     name: 'Menu Analyzer SDK',
@@ -222,6 +237,7 @@ const projectsData = [
   // ===== ROBIN'S TREASURE — Research / Intelligence =====
   {
     id: 16,
+    category: 'ai',
     character: '🔍',
     bounty: '📚 ROBIN\'S TREASURE',
     name: 'Code Review Assistant',
@@ -236,6 +252,7 @@ const projectsData = [
   },
   {
     id: 17,
+    category: 'ai',
     character: '🤖',
     bounty: '📚 ROBIN\'S TREASURE',
     name: 'AI Chatbot Builder',
@@ -250,6 +267,7 @@ const projectsData = [
   },
   {
     id: 18,
+    category: 'ai',
     character: '🧠',
     bounty: '📚 ROBIN\'S TREASURE',
     name: 'AI Chatbot Builder Pro',
@@ -266,6 +284,7 @@ const projectsData = [
   // ===== FRANKY'S TREASURE — Tools / Build =====
   {
     id: 19,
+    category: 'automation',
     character: '🤖',
     bounty: '🔧 FRANKY\'S TREASURE',
     name: 'Competitor Monitor Bot',
@@ -280,6 +299,7 @@ const projectsData = [
   },
   {
     id: 20,
+    category: 'automation',
     character: '📅',
     bounty: '🔧 FRANKY\'S TREASURE',
     name: 'Social Media Scheduler',
@@ -294,6 +314,7 @@ const projectsData = [
   },
   {
     id: 21,
+    category: 'automation',
     character: '📋',
     bounty: '🔧 FRANKY\'S TREASURE',
     name: 'Appointment Booker',
@@ -310,6 +331,7 @@ const projectsData = [
   // ===== BROOK'S TREASURE — Communication =====
   {
     id: 22,
+    category: 'ai',
     character: '🎵',
     bounty: '🎵 BROOK\'S TREASURE',
     name: 'WhatsApp Voice Clone',
@@ -324,6 +346,7 @@ const projectsData = [
   },
   {
     id: 23,
+    category: 'ai',
     character: '🔐',
     bounty: '🎵 BROOK\'S TREASURE',
     name: 'Lost Password AI',
@@ -338,6 +361,7 @@ const projectsData = [
   },
   {
     id: 24,
+    category: 'web',
     character: '🏥',
     bounty: '🎵 BROOK\'S TREASURE',
     name: 'Doctor Website',
@@ -354,6 +378,7 @@ const projectsData = [
   // ===== JINBE'S TREASURE — Infrastructure / Structure =====
   {
     id: 25,
+    category: 'automation',
     character: '💼',
     bounty: '🌊 JINBE\'S TREASURE',
     name: 'Dedutto',
@@ -368,6 +393,7 @@ const projectsData = [
   },
   {
     id: 26,
+    category: 'automation',
     character: '📈',
     bounty: '🌊 JINBE\'S TREASURE',
     name: 'Business Analytics Dashboard',
@@ -382,6 +408,7 @@ const projectsData = [
   },
   {
     id: 27,
+    category: 'ai',
     character: '🎨',
     bounty: '🌊 JINBE\'S TREASURE',
     name: 'AI Room Designer',
@@ -396,6 +423,7 @@ const projectsData = [
   },
   {
     id: 28,
+    category: 'ai',
     character: '🧠',
     bounty: '⭐ LUFFY\'S TREASURE',
     name: 'AI Agent Dashboard',
@@ -410,6 +438,7 @@ const projectsData = [
   },
   {
     id: 29,
+    category: 'ai',
     character: '🎯',
     bounty: '⭐ LUFFY\'S TREASURE',
     name: 'AI Lead Scoring',
@@ -424,6 +453,7 @@ const projectsData = [
   },
   {
     id: 30,
+    category: 'ai',
     character: '🗂️',
     bounty: '⭐ LUFFY\'S TREASURE',
     name: 'AI Productivity Hub',
@@ -438,6 +468,7 @@ const projectsData = [
   },
   {
     id: 31,
+    category: 'ai',
     character: '🎙️',
     bounty: '📚 ROBIN\'S TREASURE',
     name: 'Brand Voice System',
@@ -452,6 +483,7 @@ const projectsData = [
   },
   {
     id: 32,
+    category: 'automation',
     character: '📇',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'CRM Data Enrichment',
@@ -466,6 +498,7 @@ const projectsData = [
   },
   {
     id: 33,
+    category: 'automation',
     character: '📞',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'GHL Appointment Setter',
@@ -480,6 +513,7 @@ const projectsData = [
   },
   {
     id: 34,
+    category: 'automation',
     character: '⚡',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'GHL Lead Follow-Up',
@@ -494,6 +528,7 @@ const projectsData = [
   },
   {
     id: 35,
+    category: 'automation',
     character: '📱',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'GHL Missed-Call Text-Back',
@@ -508,6 +543,7 @@ const projectsData = [
   },
   {
     id: 36,
+    category: 'automation',
     character: '⭐',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'GHL Review Automation',
@@ -522,6 +558,7 @@ const projectsData = [
   },
   {
     id: 37,
+    category: 'automation',
     character: '🔄',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'HubSpot API Integration',
@@ -536,6 +573,7 @@ const projectsData = [
   },
   {
     id: 38,
+    category: 'automation',
     character: '🔁',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'Make CRM Sync',
@@ -550,6 +588,7 @@ const projectsData = [
   },
   {
     id: 39,
+    category: 'automation',
     character: '🔔',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'E-Commerce Notifications',
@@ -564,6 +603,7 @@ const projectsData = [
   },
   {
     id: 40,
+    category: 'automation',
     character: '🧾',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'Invoice Automation',
@@ -578,6 +618,7 @@ const projectsData = [
   },
   {
     id: 41,
+    category: 'automation',
     character: '🌍',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'Social Media Pipeline',
@@ -592,6 +633,7 @@ const projectsData = [
   },
   {
     id: 42,
+    category: 'automation',
     character: '📊',
     bounty: '🔧 FRANKY\'S TREASURE',
     name: 'n8n Reporting Agent',
@@ -606,6 +648,7 @@ const projectsData = [
   },
   {
     id: 43,
+    category: 'ai',
     character: '📥',
     bounty: '🔧 FRANKY\'S TREASURE',
     name: 'n8n Support Inbox',
@@ -620,6 +663,7 @@ const projectsData = [
   },
   {
     id: 44,
+    category: 'ai',
     character: '🛒',
     bounty: '🎵 BROOK\'S TREASURE',
     name: 'WhatsApp Sales Agent',
@@ -630,6 +674,97 @@ const projectsData = [
     features: ['Zero-hardcodes config', 'Guardrail handoff', 'Negotiation validator', 'Encrypted API keys', 'Admin dashboard'],
     github: 'https://github.com/jryahia/whatsapp-sales-agent',
     demo: '',
+    status: 'done'
+  },
+  // ===== ROME GRA CLIENT SITES — Real client websites =====
+  {
+    id: 45,
+    category: 'web',
+    character: '🖥️',
+    bounty: '💫 SANJI\'S TREASURE',
+    name: 'AM Technology',
+    shortDesc: 'Client website for a Rome East IT repair business — dark cyber-tech design.',
+    fullDesc: 'A self-contained client website for AM Technology, computer repair and IT assistance in Rome East. Dark cyber-tech design with glassmorphism, FAQ accordion, mobile menu, JSON-LD structured data, and click-to-call + WhatsApp click-to-chat. One HTML file, zero dependencies, verified at 360/768/1200px.',
+    image: 'images/clients/amtechnology.png',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    features: ['Click-to-call + WhatsApp CTA', 'JSON-LD structured data', 'Reveal-on-scroll animations', 'FAQ accordion', 'Responsive 360/768/1200'],
+    github: 'https://github.com/jryahia/amtechnology',
+    demo: 'https://jryahia.github.io/amtechnology/',
+    status: 'done'
+  },
+  {
+    id: 46,
+    category: 'web',
+    character: '🏬',
+    bounty: '💫 SANJI\'S TREASURE',
+    name: 'Datamatic Cash&Carry',
+    shortDesc: 'B2B wholesale IT distributor website — catalog, search and trade tone.',
+    fullDesc: 'A client website for Datamatic Cash&Carry, Rome\'s IT wholesale distributor. Warm off-white and amber warehouse design with product catalog cards, search, B2B wholesale tone, click-to-call + WhatsApp, Google Maps and JSON-LD structured data. Single-file, zero dependencies.',
+    image: 'images/clients/datamatic.png',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    features: ['Product catalog cards', 'B2B wholesale messaging', 'WhatsApp click-to-chat', 'Google Maps integration', 'JSON-LD structured data'],
+    github: 'https://github.com/jryahia/datamatic',
+    demo: 'https://jryahia.github.io/datamatic/',
+    status: 'done'
+  },
+  {
+    id: 47,
+    category: 'web',
+    character: '🛠️',
+    bounty: '💫 SANJI\'S TREASURE',
+    name: 'H2S Computer',
+    shortDesc: 'Local computer shop website — transparent price list, testimonials, opening hours.',
+    fullDesc: 'A client website for H2S Computer, a neighborhood computer shop in Rome. Friendly warm design with a transparent price list card, customer testimonials, opening hours, mobile call bar, click-to-call + WhatsApp and JSON-LD structured data. Single-file, zero dependencies.',
+    image: 'images/clients/h2s.png',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    features: ['Transparent price list', 'Customer testimonials', 'Opening hours', 'Mobile call bar', 'WhatsApp click-to-chat'],
+    github: 'https://github.com/jryahia/h2s',
+    demo: 'https://jryahia.github.io/h2s/',
+    status: 'done'
+  },
+  {
+    id: 48,
+    category: 'web',
+    character: '🧭',
+    bounty: '💫 SANJI\'S TREASURE',
+    name: 'I-node',
+    shortDesc: 'IT consultancy website — cloud, cybersecurity, software development.',
+    fullDesc: 'A client website for I-node, an IT consultancy in Rome EUR. Clean corporate trust-focused design with deep navy, service breakdowns, a clear methodology, email CTA with prefilled subject, Google Maps and JSON-LD structured data. Single-file, zero dependencies.',
+    image: 'images/clients/inode.png',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    features: ['Corporate trust design', 'Services + methodology', 'Email CTA with prefilled subject', 'Google Maps integration', 'JSON-LD structured data'],
+    github: 'https://github.com/jryahia/inode',
+    demo: 'https://jryahia.github.io/inode/',
+    status: 'done'
+  },
+  {
+    id: 49,
+    category: 'web',
+    character: '🎨',
+    bounty: '💫 SANJI\'S TREASURE',
+    name: 'inTown',
+    shortDesc: 'Digital studio website — bold playful bento-grid SaaS design.',
+    fullDesc: 'A client website for inTown, a digital studio in Rome EUR. Bold playful bento-grid SaaS design with cream, hot pink/orange/teal accents and gradient mesh, covering branding, web, marketing, e-commerce and automation, with click-to-call + WhatsApp. Single-file, zero dependencies.',
+    image: 'images/clients/intown.png',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    features: ['Bento-grid design', 'Service showcase', 'WhatsApp click-to-chat', 'Google Maps integration', 'JSON-LD structured data'],
+    github: 'https://github.com/jryahia/intown',
+    demo: 'https://jryahia.github.io/intown/',
+    status: 'done'
+  },
+  {
+    id: 50,
+    category: 'web',
+    character: '✒️',
+    bounty: '💫 SANJI\'S TREASURE',
+    name: 'Nuovi Spazi Advertising',
+    shortDesc: 'Advertising agency website — minimal editorial with kinetic typography.',
+    fullDesc: 'A client website for Nuovi Spazi Advertising, a Rome ad agency. Minimal editorial design with near-white background, serif type, oversized outlined headlines, red accent, marquee and award-show feel. Email CTA with prefilled subject/body, Google Maps and JSON-LD. Single-file, zero dependencies.',
+    image: 'images/clients/nuovispazi.png',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    features: ['Kinetic typography', 'Editorial serif design', 'Marquee strips', 'Email CTA with prefilled message', 'JSON-LD structured data'],
+    github: 'https://github.com/jryahia/nuovispazi',
+    demo: 'https://jryahia.github.io/nuovispazi/',
     status: 'done'
   }
 ];
@@ -648,6 +783,8 @@ function openProjectModal(id) {
   document.getElementById('modal-features').innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
   document.getElementById('modal-github').href = p.github;
   document.getElementById('modal-demo').href = p.demo;
+  const catEl = document.getElementById('modal-cat');
+  if (catEl) catEl.textContent = p.category ? `${catLabel(p.category)} Project` : '';
   document.getElementById('project-modal').classList.add('active');
   document.body.classList.add('modal-open');
 }
@@ -770,15 +907,19 @@ function revealOnScroll(grid) {
   }
 }
 
+const CAT_LABELS = { ai: 'AI', automation: 'Automation', web: 'Websites' };
+function catLabel(c) { return CAT_LABELS[c] || c; }
+
 function renderProjects() {
   const grid = document.getElementById('projects-grid');
   if (!grid) return;
   grid.innerHTML = projectsData.map(p => `
-    <div class="treasure-card" data-id="${p.id}">
+    <div class="treasure-card" data-id="${p.id}" data-cat="${p.category || ''}">
       <div class="card-image-container">
         <img class="card-image" src="${p.image}" alt="${p.name}">
         <div class="card-overlay"><span class="view-details">View Details →</span></div>
         ${p.status === 'in-progress' ? '<div class="in-progress-stamp">⚗️ Still Brewing...</div>' : ''}
+        ${p.category ? `<div class="card-cat cat-${p.category}"><span>${catLabel(p.category)}</span></div>` : ''}
       </div>
       <div class="card-character">${p.character}</div>
       <div class="card-bounty">${p.bounty}</div>
@@ -790,11 +931,63 @@ function renderProjects() {
   cachedTreasureCards = grid.querySelectorAll('.treasure-card');
   revealOnScroll(grid);
 
+  // Fill category tab counts
+  const counts = { all: projectsData.length, ai: 0, automation: 0, web: 0 };
+  projectsData.forEach(p => { if (counts[p.category] !== undefined) counts[p.category]++; });
+  document.querySelectorAll('.cat-count').forEach(el => {
+    const tab = el.closest('.cat-tab');
+    if (tab) el.textContent = counts[tab.dataset.cat] || 0;
+  });
+
+  // 3D tilt on hover — pro library browsing feel
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  cachedTreasureCards.forEach(card => {
+    card.classList.add('tilt');
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `perspective(900px) rotateY(${(px * 10).toFixed(2)}deg) rotateX(${(-py * 10).toFixed(2)}deg) translateY(-6px)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+
   // Update bounty stat count
   const bountyStat = document.querySelector('.stat-value');
-  if (bountyStat && bountyStat.textContent === '20+') {
-    bountyStat.textContent = '28+';
+  if (bountyStat && (bountyStat.textContent === '20+' || bountyStat.textContent === '28+' || bountyStat.textContent === '34+')) {
+    bountyStat.textContent = '55';
   }
+}
+
+// Combined category + search filter. Returns visible card count.
+function applyFilters() {
+  const filter = document.getElementById('project-filter');
+  const term = (filter && filter.value ? filter.value : '').toLowerCase();
+  const cards = cachedTreasureCards || document.querySelectorAll('.treasure-card');
+  let visible = 0;
+  cards.forEach(card => {
+    const p = projectsData.find(x => x.id === parseInt(card.dataset.id));
+    if (!p) { card.style.display = 'none'; return; }
+    const catOk = activeCat === 'all' || p.category === activeCat;
+    const termOk = !term
+      || p.name.toLowerCase().includes(term)
+      || p.tech.some(t => t.toLowerCase().includes(term))
+      || (p.shortDesc || '').toLowerCase().includes(term);
+    const show = catOk && termOk;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  return visible;
+}
+
+// Cards hidden by a filter get skipped by the reveal observer; surface them
+// immediately so a filtered view never shows invisible cards.
+function forceRevealVisible() {
+  const cards = cachedTreasureCards || document.querySelectorAll('.treasure-card');
+  cards.forEach(card => {
+    if (card.style.display === 'none') return;
+    if (!card.classList.contains('revealed')) card.classList.add('revealed');
+  });
 }
 
 function init() {
@@ -831,6 +1024,22 @@ function init() {
     if (e.key === 'Escape') closeProjectModal();
   });
 
+  // Category tabs
+  const tabs = document.querySelectorAll('.cat-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      activeCat = tab.dataset.cat;
+      tabs.forEach(t => {
+        const on = t === tab;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      applyFilters();
+      forceRevealVisible();
+      if (window.setCategoryTint) window.setCategoryTint(activeCat);
+    });
+  });
+
   // Filter with debounce
   const filter = document.getElementById('project-filter');
   if (filter) {
@@ -838,18 +1047,14 @@ function init() {
     filter.addEventListener('input', e => {
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(() => {
-        const term = e.target.value.toLowerCase();
-        const cards = cachedTreasureCards || document.querySelectorAll('.treasure-card');
-        cards.forEach(card => {
-          const id = parseInt(card.dataset.id);
-          const p = projectsData.find(x => x.id === id);
-          const match = p && (p.name.toLowerCase().includes(term) || p.tech.some(t => t.toLowerCase().includes(term)));
-          card.style.display = match ? '' : 'none';
-        });
+        applyFilters();
+        forceRevealVisible();
       }, 300);
     });
   }
 }
+
+let activeCat = 'all';
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);

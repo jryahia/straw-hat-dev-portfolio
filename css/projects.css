@@ -676,3 +676,136 @@
         padding: 20px;
     }
 }
+
+/* ===== Category tabs (Treasure Vault navigation) ===== */
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 24px auto 0;
+    max-width: 700px;
+}
+
+.cat-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 999px;
+    color: var(--text-secondary);
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.cat-tab:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.25);
+}
+
+.cat-tab.active {
+    background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
+    border-color: var(--accent-gold);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.45);
+}
+
+.cat-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    border-radius: 999px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+.cat-tab.active .cat-count {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+}
+
+/* ===== Category badge on treasure cards ===== */
+.card-cat {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 11;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card-cat.cat-ai {
+    background: rgba(34, 211, 238, 0.85);
+    border: 1px solid rgba(34, 211, 238, 0.9);
+}
+
+.card-cat.cat-automation {
+    background: rgba(74, 222, 128, 0.85);
+    border: 1px solid rgba(74, 222, 128, 0.9);
+}
+
+.card-cat.cat-web {
+    background: rgba(245, 158, 11, 0.9);
+    border: 1px solid rgba(245, 158, 11, 0.95);
+}
+
+/* ===== Modal category chip ===== */
+.modal-cat {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ===== 3D tilt on treasure cards ===== */
+.treasure-card.tilt {
+    will-change: transform;
+    transition: transform 0.12s ease-out;
+}
+
+.treasure-card.tilt:hover {
+    z-index: 5;
+}
+
+@media (max-width: 640px) {
+    .category-tabs {
+        gap: 8px;
+        margin-top: 16px;
+    }
+    .cat-tab {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}

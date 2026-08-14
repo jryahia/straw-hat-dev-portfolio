@@ -168,6 +168,7 @@ const translations = {
             title: 'Legendary Projects',
             subtitle: 'Click any treasure to explore! 🏴☠️',
             searchPlaceholder: 'Search projects...',
+            catAll: 'All', catAi: 'AI', catAutomation: 'Automation', catWeb: 'Websites',
             brewing: '⚗️ Still Brewing...'
         },
         modal: {
@@ -244,6 +245,7 @@ const translations = {
             title: 'Projets Légendaires',
             subtitle: 'Cliquez sur un trésor pour explorer ! 🏴☠️',
             searchPlaceholder: 'Rechercher des projets...',
+            catAll: 'Tous', catAi: 'IA', catAutomation: 'Automatisation', catWeb: 'Sites web',
             brewing: '⚗️ En Préparation...'
         },
         modal: {
@@ -320,6 +322,7 @@ const translations = {
             title: 'Progetti Leggendari',
             subtitle: 'Clicca su un tesoro per esplorare! 🏴☠️',
             searchPlaceholder: 'Cerca progetti...',
+            catAll: 'Tutti', catAi: 'IA', catAutomation: 'Automazione', catWeb: 'Siti web',
             brewing: '⚗️ In Preparazione...'
         },
         modal: {
@@ -396,6 +399,7 @@ const translations = {
             title: 'Legendäre Projekte',
             subtitle: 'Klicke auf einen Schatz zum Erkunden! 🏴☠️',
             searchPlaceholder: 'Projekte suchen...',
+            catAll: 'Alle', catAi: 'KI', catAutomation: 'Automatisierung', catWeb: 'Websites',
             brewing: '⚗️ In Vorbereitung...'
         },
         modal: {
@@ -472,6 +476,7 @@ const translations = {
             title: 'Легендарные Проекты',
             subtitle: 'Нажмите на сокровище, чтобы исследовать! 🏴☠️',
             searchPlaceholder: 'Поиск проектов...',
+            catAll: 'Все', catAi: 'ИИ', catAutomation: 'Автоматизация', catWeb: 'Сайты',
             brewing: '⚗️ В Разработке...'
         },
         modal: {
@@ -548,6 +553,7 @@ const translations = {
             title: '伝説のプロジェクト',
             subtitle: '宝物をクリックして探索！🏴☠️',
             searchPlaceholder: 'プロジェクトを検索...',
+            catAll: 'すべて', catAi: 'AI', catAutomation: '自動化', catWeb: 'ウェブサイト',
             brewing: '⚗️ 開発中...'
         },
         modal: {
@@ -624,6 +630,7 @@ const translations = {
             title: 'مشاريع أسطورية',
             subtitle: 'انقر على أي كنز للاستكشاف! 🏴☠️',
             searchPlaceholder: 'البحث عن مشاريع...',
+            catAll: 'الكل', catAi: 'الذكاء الاصطناعي', catAutomation: 'الأتمتة', catWeb: 'المواقع',
             brewing: '⚗️ قيد التطوير...'
         },
         modal: {

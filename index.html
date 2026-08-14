@@ -97,7 +97,7 @@ Your browser does not support the audio element.
 </button>
 <div class="bounty-stats">
     <div class="stat"><div class="stat-value">3+</div><div class="stat-label" data-i18n="home.stats.years">Years</div></div>
-    <div class="stat"><div class="stat-value">28+</div><div class="stat-label" data-i18n="home.stats.projects">Projects</div></div>
+    <div class="stat"><div class="stat-value">55</div><div class="stat-label" data-i18n="home.stats.projects">Projects</div></div>
     <div class="stat"><div class="stat-value">∞</div><div class="stat-label" data-i18n="home.stats.dreams">Dreams</div></div>
 </div>
 </div>
@@ -146,6 +146,12 @@ Your browser does not support the audio element.
 <h2 class="projects-title" data-i18n="projects.title">Legendary Projects</h2>
 <p class="projects-subtitle" data-i18n="projects.subtitle">Click any treasure to explore! 🏴☠️</p>
 <input type="search" id="project-filter" class="project-filter" data-i18n-placeholder="projects.searchPlaceholder" placeholder="Search projects...">
+<div class="category-tabs" id="category-tabs" role="tablist" aria-label="Project categories">
+  <button class="cat-tab active" data-cat="all" role="tab" aria-selected="true"><span data-i18n="projects.catAll">All</span><span class="cat-count">50</span></button>
+  <button class="cat-tab" data-cat="ai" role="tab" aria-selected="false"><span data-i18n="projects.catAi">AI</span><span class="cat-count">0</span></button>
+  <button class="cat-tab" data-cat="automation" role="tab" aria-selected="false"><span data-i18n="projects.catAutomation">Automation</span><span class="cat-count">0</span></button>
+  <button class="cat-tab" data-cat="web" role="tab" aria-selected="false"><span data-i18n="projects.catWeb">Websites</span><span class="cat-count">0</span></button>
+</div>
 </div>
 <div class="treasure-grid" id="projects-grid"></div>
 </div>
@@ -157,7 +163,7 @@ Your browser does not support the audio element.
 <h2 class="contact-title" data-i18n="contact.title">Join My Crew!</h2>
 <p class="contact-subtitle" data-i18n="contact.subtitle">Looking for a developer who codes like Zoro fights? Let's conquer the New World together!</p>
 <div class="nakama-links">
-<a href="https://github.com/jryahia?tab=projects" target="_blank" rel="noopener noreferrer" class="nakama-link">
+<a href="https://github.com/jryahia?tab=repositories" target="_blank" rel="noopener noreferrer" class="nakama-link">
 <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
 <span data-i18n="contact.github">GitHub</span>
 </a>
@@ -187,6 +193,7 @@ Your browser does not support the audio element.
 <div class="modal-header">
 <div class="modal-character" id="modal-character">🎩</div>
 <h2 class="modal-title" id="modal-title">Project Name</h2>
+<div class="modal-cat" id="modal-cat"></div>
 <p class="modal-subtitle" id="modal-subtitle">Description</p>
 </div>
 <div class="modal-body">

@@ -3,7 +3,8 @@ const ANIMATION_DURATION=2000;
 const TRANSITION_BUFFER=200;
 const PALM_TREE_COUNT=3;
 let scene,camera,renderer,ship,ocean;
-let islands=[],characters=[],coins=[],clouds=[];
+let islands=[],characters=[],coins=[],clouds=[],chests=[],embers=null;
+const chestGlowMats=[];
 let currentSection=0;
 const totalSections=4;
 let isTransitioning=false;
@@ -454,6 +455,58 @@ opacity:0.9
 }));
 scene.add(stars);
 
+// Floating treasure chests — the vault you are browsing
+const chestGold=new THREE.MeshStandardMaterial({color:0xb45309,roughness:0.4,metalness:0.8});
+const chestLid=new THREE.MeshStandardMaterial({color:0xd97706,roughness:0.35,metalness:0.8});
+for(let i=0;i<10;i++){
+const chest=new THREE.Group();
+const body=new THREE.Mesh(new THREE.BoxGeometry(0.9,0.55,0.6),chestGold);
+const lid=new THREE.Mesh(new THREE.BoxGeometry(0.95,0.22,0.65),chestLid);
+lid.position.y=0.38;
+const glowMat=new THREE.MeshStandardMaterial({color:0xf59e0b,emissive:0xf59e0b,emissiveIntensity:0.7});
+const glow=new THREE.Mesh(new THREE.SphereGeometry(0.16,10,10),glowMat);
+glow.position.y=0.78;
+glowMat.userData.targetColor=new THREE.Color(0xf59e0b);
+chestGlowMats.push(glowMat);
+chest.add(body,lid,glow);
+const angle=Math.random()*Math.PI*2;
+const radius=8+Math.random()*22;
+chest.position.set(Math.cos(angle)*radius,1.2+Math.random()*2.5,Math.sin(angle)*radius);
+chest.userData.baseY=chest.position.y;
+chest.userData.offset=Math.random()*Math.PI*2;
+chest.userData.speed=0.4+Math.random()*0.5;
+chest.userData.rotSpeed=(Math.random()-0.5)*0.9;
+chests.push(chest);
+scene.add(chest);
+}
+
+// Ember field — reacts to the active category tab
+const EMBER_COUNT=350;
+const emberGeo=new THREE.BufferGeometry();
+const emberPos=new Float32Array(EMBER_COUNT*3);
+for(let i=0;i<EMBER_COUNT;i++){
+emberPos[i*3]=-30+Math.random()*60;
+emberPos[i*3+1]=0.5+Math.random()*18;
+emberPos[i*3+2]=-30+Math.random()*60;
+}
+emberGeo.setAttribute('position',new THREE.BufferAttribute(emberPos,3));
+const emberMat=new THREE.PointsMaterial({
+color:0xf59e0b,size:0.18,transparent:true,opacity:0.85,
+blending:THREE.AdditiveBlending,depthWrite:false
+});
+embers=new THREE.Points(emberGeo,emberMat);
+embers.userData.basePositions=emberPos.slice();
+embers.userData.targetColor=new THREE.Color(0xf59e0b);
+scene.add(embers);
+
+// Category tabs tint the 3D world (called from js/projects.js)
+window.setCategoryTint=function(cat){
+const colors={ai:0x22d3ee,automation:0x4ade80,web:0xfbbf24,all:0xf59e0b};
+const c=new THREE.Color(colors[cat]||0xf59e0b);
+if(embers)embers.userData.targetColor.copy(c);
+chestGlowMats.forEach(m=>{if(m.userData.targetColor)m.userData.targetColor.copy(c);});
+};
+
 for(let i=0;i<8;i++){
 const cloudGeo=new THREE.SphereGeometry(3+Math.random()*2,8,8);
 const cloudMat=new THREE.MeshStandardMaterial({
@@ -644,6 +697,24 @@ coins.forEach(coin=>{
 coin.position.y+=Math.sin(time*coin.userData.speed+coin.userData.offset)*0.005;
 coin.rotation.y+=coin.userData.rotSpeed;
 coin.rotation.x+=coin.userData.rotSpeed*0.5;
+});
+
+chests.forEach(chest=>{
+chest.position.y=chest.userData.baseY+Math.sin(time*chest.userData.speed+chest.userData.offset)*0.35;
+chest.rotation.y+=chest.userData.rotSpeed*delta;
+});
+
+if(embers){
+const pos=embers.geometry.attributes.position.array;
+const base=embers.userData.basePositions;
+for(let i=0;i<pos.length;i+=3){
+pos[i+1]=base[i+1]+Math.sin(time*0.5+i*0.13)*1.5;
+}
+embers.geometry.attributes.position.needsUpdate=true;
+embers.material.color.lerp(embers.userData.targetColor,0.03);
+}
+chestGlowMats.forEach(m=>{
+if(m.userData.targetColor)m.color.lerp(m.userData.targetColor,0.03);
 });
 
 clouds.forEach(cloud=>{
