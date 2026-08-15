@@ -1,5 +1,5 @@
 // Q Fix: Service Worker for PWA offline support
-const CACHE_NAME = 'straw-hat-portfolio-v1';
+const CACHE_NAME = 'straw-hat-portfolio-v2';
 const ALLOWED_ORIGINS = [self.location.origin];
 const urlsToCache = [
   '/',
@@ -7,10 +7,13 @@ const urlsToCache = [
   'css/style.css',
   'css/projects.css',
   'css/mobile.css',
+  'css/chatbot.css',
   'js/script.js',
   'js/projects.js',
   'js/audio.js',
   'js/contact.js',
+  'js/i18n.js',
+  'js/chatbot.js',
   'jolly-roger.svg',
   'audio/one-piece-overtaken.mp3'
 ];
@@ -27,30 +30,33 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event - stale-while-revalidate: serve cache, refresh it from network,
+// and fall back to network when not cached (avoids pinning old assets forever).
 self.addEventListener('fetch', (event) => {
   const requestUrl = new URL(event.request.url);
-  
+
   // Validate origin to prevent SSRF
   if (!ALLOWED_ORIGINS.includes(requestUrl.origin) && !requestUrl.protocol.startsWith('http')) {
     return;
   }
-  
+
   event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        if (response) {
-          return response;
+    caches.match(event.request).then((cached) => {
+      const networkFetch = fetch(event.request).then((response) => {
+        // Only cache valid, same-origin GET responses (avoid caching errors)
+        if (response && response.status === 200 && response.type === 'basic' && event.request.method === 'GET') {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
         }
-        return fetch(event.request).catch(() => {
-          // Return offline page for navigation requests
-          if (event.request.mode === 'navigate') {
-            return caches.match('index.html');
-          }
-          // Return generic error response for other requests
-          return new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
-        });
-      })
+        return response;
+      }).catch(() => {
+        // Offline fallbacks
+        if (event.request.mode === 'navigate') return caches.match('index.html');
+        return new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
+      });
+      // Return the network first if we have no cached copy; otherwise cached + background refresh
+      return cached || networkFetch;
+    })
   );
 });
 
