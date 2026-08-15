@@ -1,15 +1,18 @@
 /* ==== Straw Hat Chatbot Widget ==== */
 
-/* Floating launcher button — sits directly ABOVE the audio player (also bottom-right),
-   sized to match the audio button so the two stack neatly one-on-one. */
+/* Dock the audio player just above the chat FAB so the corner shows one tidy,
+   professional control cluster: chat button anchored at 20px, music player above it. */
+.audio-player{bottom:88px !important}
+
+/* Floating launcher — anchored to the bottom-right corner at 20px (the FAB). */
 #chat-launcher{
-  position:fixed;bottom:96px;right:32px;z-index:9000;width:44px;height:44px;border-radius:50%;
+  position:fixed;bottom:20px;right:20px;z-index:9000;width:54px;height:54px;border-radius:50%;
   border:none;cursor:pointer;display:grid;place-items:center;
   background:linear-gradient(135deg,var(--accent-red,#c02626),var(--accent-gold,#f59e0b));
-  box-shadow:0 8px 22px -8px var(--glow-red,rgba(220,38,38,.5));
-  transition:transform .25s,box-shadow .25s;font-size:20px;
+  box-shadow:0 12px 28px -8px var(--glow-red,rgba(220,38,38,.55));
+  transition:transform .25s,box-shadow .25s;font-size:24px;
 }
-#chat-launcher:hover{transform:scale(1.08);box-shadow:0 12px 30px -8px var(--glow-gold,rgba(245,158,11,.5))}
+#chat-launcher:hover{transform:scale(1.08);box-shadow:0 16px 36px -8px var(--glow-gold,rgba(245,158,11,.6));background:linear-gradient(135deg,var(--accent-gold,#f59e0b),var(--accent-red,#c02626))}
 #chat-launcher .launcher-emoji{line-height:1}
 
 /* Unread badge */
@@ -17,9 +20,9 @@
   background:var(--accent-red-bright,#ef4444);color:#fff;font-size:11px;font-weight:800;
   display:grid;place-items:center;padding:0 5px;border:2px solid var(--bg-primary,#0a0806)}
 
-/* Chat window */
+/* Chat window — opens above the docked player + FAB cluster */
 #chat-window{
-  position:fixed;bottom:170px;right:16px;z-index:9001;width:min(380px,calc(100vw - 32px));height:min(480px,calc(100vh - 240px));
+  position:fixed;bottom:190px;right:16px;z-index:9001;width:min(380px,calc(100vw - 32px));height:min(500px,calc(100vh - 260px));
   display:flex;flex-direction:column;overflow:hidden;border-radius:20px;
   background:var(--bg-primary,#0a0806);border:1px solid var(--border,rgba(245,158,11,.2));
   box-shadow:0 30px 80px -20px rgba(0,0,0,.7);opacity:0;transform:translateY(20px) scale(.97);
@@ -65,15 +68,15 @@
 .chat-send:hover{transform:scale(1.08)}
 
 /* RTL support */
-html[dir="rtl"] #chat-launcher{right:auto;left:32px}
-html[dir="rtl"] #chat-window{right:auto;left:16px;bottom:170px}
+html[dir="rtl"] #chat-launcher{right:auto;left:20px}
+html[dir="rtl"] #chat-window{right:auto;left:16px;bottom:190px}
 html[dir="rtl"] .msg.bot{align-self:flex-start}
 html[dir="rtl"] .msg.user{align-self:flex-end}
 
-/* Mobile — keep launcher stacked above the compact audio player */
+/* Mobile — compact corner cluster, FAB still 20px */
 @media(max-width:640px){
-  #chat-launcher{bottom:86px;right:16px}
-  #chat-window{right:8px;left:8px;width:auto;bottom:150px;height:min(440px,calc(100vh - 220px))}
+  #chat-launcher{bottom:20px;right:16px;width:50px;height:50px}
+  #chat-window{right:8px;left:8px;width:auto;bottom:170px;height:min(460px,calc(100vh - 200px))}
   html[dir="rtl"] #chat-launcher{right:auto;left:16px}
   html[dir="rtl"] #chat-window{left:8px;right:8px}
 }
