@@ -1,14 +1,15 @@
 /* ==== Straw Hat Chatbot Widget ==== */
 
-/* Floating launcher button */
+/* Floating launcher button — sits directly ABOVE the audio player (also bottom-right),
+   sized to match the audio button so the two stack neatly one-on-one. */
 #chat-launcher{
-  position:fixed;bottom:22px;right:22px;z-index:9000;width:60px;height:60px;border-radius:50%;
+  position:fixed;bottom:96px;right:32px;z-index:9000;width:44px;height:44px;border-radius:50%;
   border:none;cursor:pointer;display:grid;place-items:center;
   background:linear-gradient(135deg,var(--accent-red,#c02626),var(--accent-gold,#f59e0b));
-  box-shadow:0 10px 30px -8px var(--glow-red,rgba(220,38,38,.5));
-  transition:transform .25s,box-shadow .25s;font-size:26px;
+  box-shadow:0 8px 22px -8px var(--glow-red,rgba(220,38,38,.5));
+  transition:transform .25s,box-shadow .25s;font-size:20px;
 }
-#chat-launcher:hover{transform:scale(1.08);box-shadow:0 14px 38px -8px var(--glow-gold,rgba(245,158,11,.5))}
+#chat-launcher:hover{transform:scale(1.08);box-shadow:0 12px 30px -8px var(--glow-gold,rgba(245,158,11,.5))}
 #chat-launcher .launcher-emoji{line-height:1}
 
 /* Unread badge */
@@ -18,7 +19,7 @@
 
 /* Chat window */
 #chat-window{
-  position:fixed;bottom:94px;right:22px;z-index:9001;width:min(380px,calc(100vw - 32px));height:min(540px,calc(100vh - 130px));
+  position:fixed;bottom:170px;right:16px;z-index:9001;width:min(380px,calc(100vw - 32px));height:min(480px,calc(100vh - 240px));
   display:flex;flex-direction:column;overflow:hidden;border-radius:20px;
   background:var(--bg-primary,#0a0806);border:1px solid var(--border,rgba(245,158,11,.2));
   box-shadow:0 30px 80px -20px rgba(0,0,0,.7);opacity:0;transform:translateY(20px) scale(.97);
@@ -64,14 +65,16 @@
 .chat-send:hover{transform:scale(1.08)}
 
 /* RTL support */
-html[dir="rtl"] #chat-launcher, html[dir="rtl"] #chat-window{right:auto;left:22px}
-html[dir="rtl"] #chat-window{bottom:94px}
+html[dir="rtl"] #chat-launcher{right:auto;left:32px}
+html[dir="rtl"] #chat-window{right:auto;left:16px;bottom:170px}
 html[dir="rtl"] .msg.bot{align-self:flex-start}
 html[dir="rtl"] .msg.user{align-self:flex-end}
 
-/* Mobile */
+/* Mobile — keep launcher stacked above the compact audio player */
 @media(max-width:640px){
-  #chat-window{right:8px;left:8px;width:auto;bottom:88px}
+  #chat-launcher{bottom:86px;right:16px}
+  #chat-window{right:8px;left:8px;width:auto;bottom:150px;height:min(440px,calc(100vh - 220px))}
+  html[dir="rtl"] #chat-launcher{right:auto;left:16px}
   html[dir="rtl"] #chat-window{left:8px;right:8px}
 }
 @media(prefers-reduced-motion:reduce){
