@@ -1,56 +1,184 @@
-/* ==== Straw Hat Dev — Portfolio Chatbot ====
-   Offline, rule-based assistant. Reads the site's currentLanguage (i18n.js).
-   Answers questions about Yahya, his skills, projects, experience, and contact. */
+/* ============================================================
+   Straw Hat Dev — Portfolio Chatbot
+   Offline, rule-based assistant, FULLY localized.
+   Follows the site's currentLanguage (i18n.js) and re-renders
+   live when the user switches language.
+   ============================================================ */
 (function(){
   'use strict';
 
-  // ---- UI strings (follow the site's selected language with EN fallback) ----
-  var UI = {
-    en:{name:'Crew AI',status:'Online — ask me anything',ph:'Ask me about Yahya...',hello:'🏴☠️ Yo-ho-ho! I\'m Crew AI, Nakama of the Straw Hats. Ask me about Yahya\'s skills, projects, experience — or how to join his crew!\n\nTap a question below to start.'},
-    fr:{name:'Crew AI',status:'En ligne — posez-moi tout',ph:'Posez-moi une question...',hello:'🏴☠️ Yo-ho-ho ! Je suis Crew AI, Nakama des Straw Hats. Demandez-moi les compétences, projets et expérience de Yahya — ou comment rejoindre son équipage !'},
-    it:{name:'Crew AI',status:'Online — chiedimi cosa vuoi',ph:'Chiedimi di Yahya...',hello:'🏴☠️ Yo-ho-ho! Sono Crew AI, Nakama dei Cappelli di Paglia. Chiedimi delle skill di Yahya, dei progetti, dell\'esperienza — o come entrare nella sua ciurma!'},
-    de:{name:'Crew AI',status:'Online — frag mich',ph:'Frag mich nach Yahya...',hello:'🏴☠️ Yo-ho-ho! Ich bin Crew AI, Nakama der Strohhüte. Frag mich nach Yahyas Fähigkeiten, Projekten, Erfahrung — oder wie man seiner Crew beitritt!'},
-    ar:{name:'Crew AI',status:'متصل على الأنترنت',ph:'اسألني عن يحيى...',hello:'🏴☠️ يو-هو-هو! أنا كرو AI، عضو طاقم قبعة القش. اسألني عن مهارات يحيى ومشاريعه وخبرته — أو كيف تنضم إلى طاقمه!'},
-    default:{name:'Crew AI',status:'Online',ph:'Ask me...',hello:'🏴☠️ Ahoy! I\'m Crew AI, Nakama of the Straw Hats. Ask me about Yahya\'s skills, projects, experience — or how to join his crew!'}
+  // ---- Per-language UI + quick-reply chips + knowledge base ----
+  var L10N = {
+    en:{
+      name:'Crew AI', status:'Online — ask me anything', ph:'Ask me about Yahya...', close:'Close chat',
+      hello:'🏴☠️ Yo-ho-ho! I\'m Crew AI, Nakama of the Straw Hats. Ask me about Yahya\'s skills, projects, experience — or how to join his crew!\n\nTap a question below to start.',
+      chips:['🧠 Skills','💎 Projects','💼 Experience','✉️ Contact','📍 Location','🏴☠️ About'],
+      kb:[
+        {k:['who is','about yahya','who are you','who\'s','introduce','tell me about'],a:'Yahya Jarray is a full-stack developer and AI/automation engineer from Tunisia, now based in Rome 🇮🇹🇹🇳. He builds AI-powered systems that run real businesses — lead generation, appointment setters, document processing — plus beautiful themed websites. A developer who works like a Straw Hat captain: ships what actually works.'},
+        {k:['skill','stack','tech','technology','what can','framework','know','program','language'],a:'His core stack:\n🐍 Python · ⚡ FastAPI · 🗄️ SQL / SQLAlchemy\n🧠 LLM (OpenAI/DeepSeek/Anthropic) · 🤖 AI agents & chatbots\n⚙️ GoHighLevel · 🔀 Make.com · 🌊 n8n · 🕸️ Playwright\n💬 WhatsApp/SMS (Twilio) · 📄 OCR · 🐳 Docker · 🧪 pytest · 🖼️ Flet\n🌐 React/TypeScript + vanilla JS/CSS.\nHe goes full-stack when the job needs it.'},
+        {k:['project','portfolio','build','treasure','repos','repo','made','work'],a:'He\'s shipped 50+ projects. Highlights:\n• 🤖 AI agents that qualify leads, book calls & answer customers on WhatsApp (GoHighLevel, HubSpot, Make, n8n)\n• 🧠 RAG chatbots & AI document/OCR processing\n• 🎨 Beautiful client websites (restaurants, doctors, IT) — single-file, multilingual\n• 📈 Crypto/wallet analyzers & DeFi bots\n\nBrowse the Treasure Vault above — click any card to open it!'},
+        {k:['experience','years','how long','career','job','time'],a:'3+ years building professionally. He started in East Blue (Python + APIs), grinded in the Grand Line shipping client automations for GoHighLevel, HubSpot, Make and n8n, and now in the New World builds AI agents that work an inbox, book a call and write reports.'},
+        {k:['contact','hire','email','reach','link','linkedin','github','freelance','price','cost','rate'],a:'You can reach Yahya here:\n• 💼 LinkedIn: linkedin.com/in/yahya-jarray\n• 🐙 GitHub: github.com/jryahia\n• ✉️ Email: revealed in "Join My Crew" below (click to reveal)\n\nHe\'s open to freelance projects, client websites and AI automation builds.'},
+        {k:['location','where','live','based','rome','tunisia','country','city'],a:'He\'s originally from Tunisia and now based in Rome, Italy 🇹🇳🇮🇹. He works with clients internationally.'},
+        {k:['ai','agent','chatbot','llm','gpt','automation','whatsapp','automat'],a:'Yahya\'s specialty: AI that does real work. LLM-powered agents integrated with GoHighLevel, HubSpot, Make and n8n — chatbots that qualify leads, appointment setters, missed-call text-backs, document processors and WhatsApp sales agents. Production-grade, Docker-ready.'},
+        {k:['website','web','site','design','frontend','html','css'],a:'He builds polished, responsive websites — luxury restaurant sites, doctor & IT business sites, and a full One Piece-themed dev portfolio. Single-file where it makes sense, React/TypeScript when it needs more power.'},
+        {k:['luffy','one piece','straw hat','anime','nami','zoro','sanji','pirate','nakama'],a:'One Piece is the whole vibe! 🏴☠️ The crew is always ready. One Piece fans + tech lovers always get along.'},
+        {k:['thanks','thank','thx','nice','cool','awesome','great','love','gracias','merci','grazie','danke'],a:'Yo-ho-ho, you\'re welcome! Nakama don\'t say thanks too much — a captain just keeps sailing. ⛵ Check "Join My Crew" if you want to work together!'},
+        {k:['hello','hi','hey','yo','ahoy','yo-ho','sup','hola','bonjour','ciao'],a:'Ahoy there! ⛵ Great to meet you. Ask me about Yahya\'s skills, his projects, or his experience. What can I help you with?'}
+      ],
+      fallback:'Shiver me timbers — I didn\'t catch that! 🤔 Try asking about his **skills**, **projects**, **experience** or **contact**, or tap a quick question below.'
+    },
+
+    fr:{
+      name:'Crew AI', status:'En ligne — posez-moi tout', ph:'Posez-moi une question...', close:'Fermer le chat',
+      hello:'🏴☠️ Yo-ho-ho ! Je suis Crew AI, Nakama des Straw Hats. Demandez-moi les compétences, projets et expérience de Yahya — ou comment rejoindre son équipage !\n\nTouchez une question ci-dessous pour commencer.',
+      chips:['🧠 Compétences','💎 Projets','💼 Expérience','✉️ Contact','📍 Localisation','🏴☠️ À propos'],
+      kb:[
+        {k:['qui est','a propos','apropos','qui es','presente','presentation'],a:'Yahya Jarray est un développeur full-stack et ingénieur IA/automatisation, d\'origine tunisienne, basé à Rome 🇮🇹🇹🇳. Il construit des systèmes IA qui font tourner de vraies entreprises — génération de leads, prise de rendez-vous, traitement de documents — et de superbes sites web thématiques.'},
+        {k:['compétence','competence','stack','techno','que sait','framework','langage'],a:'Son stack de base :\n🐍 Python · ⚡ FastAPI · 🗄️ SQL / SQLAlchemy\n🧠 LLM (OpenAI/DeepSeek/Anthropic) · 🤖 Agents IA & chatbots\n⚙️ GoHighLevel · 🔀 Make.com · 🌊 n8n · 🕸️ Playwright\n💬 WhatsApp/SMS (Twilio) · 📄 OCR · 🐳 Docker · 🧪 pytest · 🖼️ Flet\n🌐 React/TypeScript + JS/CSS. Il est full-stack quand le projet l\'exige.'},
+        {k:['projet','portfolio','construction','fais','realise','tresor'],a:'Il a livré 50+ projets. Points forts :\n• 🤖 Agents IA qui qualifient des leads, réservent des appels et répondent aux clients sur WhatsApp\n• 🧠 Chatbots RAG & traitement de documents/OCR\n• 🎨 Sites clients magnifiques (restaurants, médecins, IT) — single-file, multilingues\n• 📈 Analyseurs crypto/wallets & bots DeFi\n\nParcourez le Coffre aux Trésors ci-dessus !'},
+        {k:['expérience','experience','années','ans','carriere','carrière'],a:'3+ ans de développement professionnel. Commencé à East Blue (Python + APIs), grandit dans la Grand Line avec des automatisations client (GoHighLevel, HubSpot, Make, n8n), et aujourd\'hui dans le Nouveau Monde avec des agents IA qui travaillent une boîte mail, réservent un appel et écrivent des rapports.'},
+        {k:['contact','email','recruter','engager','linkedin','github','prix','tarif','freelance'],a:'Vous pouvez joindre Yahya ici :\n• 💼 LinkedIn: linkedin.com/in/yahya-jarray\n• 🐙 GitHub: github.com/jryahia\n• ✉️ Email: révélé dans "Join My Crew" (cliquez pour afficher)\n\nIl est ouvert aux projets freelance, sites clients et automatisations IA.'},
+        {k:['localisation','ou','où','vit','base','rome','tunisie'],a:'Il est originaire de Tunisie et basé à Rome, en Italie 🇹🇳🇮🇹. Il travaille avec des clients partout dans le monde.'},
+        {k:['ia','agent','chatbot','llm','gpt','automatisation','whatsapp'],a:'La spécialité de Yahya : de l\'IA qui fait du vrai travail. Agents LLM intégrés à GoHighLevel, HubSpot, Make et n8n — chatbots de qualification, prise de rendez-vous, rappels d\'appels manqués, traitement de documents et agents WhatsApp. Prêt pour la production, avec Docker.'},
+        {k:['site','web','design','frontend','html','css'],a:'Il construit des sites web soignés et responsives — sites de restaurants de luxe, sites de médecins & d\'entreprises IT, et un portfolio One Piece complet. Single-file quand ça s\'y prête, React/TypeScript quand il faut plus de puissance.'},
+        {k:['luffy','one piece','chapeau de paille','anime','nami','zoro','sanji','pirate','nakama'],a:'One Piece, c\'est tout le style ! 🏴☠️ L\'équipage est toujours prêt. Les fans de One Piece et de tech s\'entendent toujours bien.'},
+        {k:['merci','thanks','super','genial','genial','cool','bien'],a:'Yo-ho-ho, de rien ! Les Nakama ne disent pas trop merci — un capitaine continue juste de naviguer. ⛵ Regardez "Join My Crew" si vous voulez travailler ensemble !'},
+        {k:['salut','bonjour','hello','hi','yo','ahoy'],a:'Ahoy ! ⛵ Enchanté. Posez-moi des questions sur les compétences de Yahya, ses projets ou son expérience. Comment puis-je vous aider ?'}
+      ],
+      fallback:'Tonnerre de Brest ! Je n\'ai pas compris. 🤔 Essayez **compétences**, **projets**, **expérience** ou **contact**, ou touchez une question ci-dessous.'
+    },
+
+    it:{
+      name:'Crew AI', status:'Online — chiedimi cosa vuoi', ph:'Chiedimi di Yahya...', close:'Chiudi chat',
+      hello:'🏴☠️ Yo-ho-ho! Sono Crew AI, Nakama dei Cappelli di Paglia. Chiedimi delle skill di Yahya, dei progetti, dell\'esperienza — o come entrare nella sua ciurma!\n\nTocca una domanda qui sotto per iniziare.',
+      chips:['🧠 Skill','💎 Progetti','💼 Esperienza','✉️ Contatti','📍 Dove','🏴☠️ Chi è'],
+      kb:[
+        {k:['chi è','chi sei','informazioni','presentami','profilo'],a:'Yahya Jarray è uno sviluppatore full-stack e ingegnere IA/automazione, originario della Tunisia e ora a Roma 🇮🇹🇹🇳. Costruisce sistemi IA che fanno davvero girare le aziende — lead generation, appuntamenti, elaborazione documenti — e siti web bellissimi a tema.'},
+        {k:['skill','stack','tecnologie','tecnologia','cosa sa','framework','linguaggio','linguaggi'],a:'Stack principale:\n🐍 Python · ⚡ FastAPI · 🗄️ SQL / SQLAlchemy\n🧠 LLM (OpenAI/DeepSeek/Anthropic) · 🤖 Agent IA & chatbot\n⚙️ GoHighLevel · 🔀 Make.com · 🌊 n8n · 🕸️ Playwright\n💬 WhatsApp/SMS (Twilio) · 📄 OCR · 🐳 Docker · 🧪 pytest · 🖼️ Flet\n🌐 React/TypeScript + JS/CSS vanilla. Full-stack quando serve.'},
+        {k:['progetto','progetti','portfolio','tesoro','fatto','realizzato','progetti'],a:'Ha realizzato 50+ progetti. Punti salienti:\n• 🤖 Agent IA che qualificano lead, prenotano chiamate e rispondono su WhatsApp\n• 🧠 Chatbot RAG & elaborazione documenti/OCR\n• 🎨 Siti clienti bellissimi (ristoranti, medici, IT) — single-file, multilingue\n• 📈 Analizzatori crypto/wallet & bot DeFi\n\nSfoglia il Forziere dei Tesori qui sopra!'},
+        {k:['esperienza','anni','carriera','lavoro','da quanto'],a:'3+ anni di sviluppo professionale. Iniziato a East Blue (Python + API), cresciuto nella Grand Line con automazioni client (GoHighLevel, HubSpot, Make, n8n), e ora nel Nuovo Mondo con agenti IA che lavorano una casella mail, prenotano chiamate e scrivono report.'},
+        {k:['contatto','contatti','email','assumere','linkedin','github','prezzo','tariffa','freelance'],a:'Puoi contattare Yahya qui:\n• 💼 LinkedIn: linkedin.com/in/yahya-jarray\n• 🐙 GitHub: github.com/jryahia\n• ✉️ Email: rivelata in "Join My Crew" qui sotto (clicca per mostrare)\n\nÈ aperto a progetti freelance, siti clienti e automazioni IA.'},
+        {k:['dove','posizione','vive','base','roma','tunisia'],a:'È originario della Tunisia e ora vive a Roma, Italia 🇹🇳🇮🇹. Lavora con clienti internazionali.'},
+        {k:['ia','agent','chatbot','llm','gpt','automazione','whatsapp'],a:'Specialità di Yahya: IA che fa lavoro vero. Agent alimentati da LLM integrati con GoHighLevel, HubSpot, Make e n8n — chatbot che qualificano lead, fissano appuntamenti, ricontattano chiamate perse, elaborano documenti e sono agenti vendita su WhatsApp. Pronti per la produzione con Docker.'},
+        {k:['sito','siti','web','design','frontend','html','css'],a:'Costruisce siti web curati e responsive — ristoranti di lusso, studi medici & aziende IT, e un portfolio a tema One Piece. Single-file dove ha senso, React/TypeScript quando serve più potenza.'},
+        {k:['luffy','one piece','cappello di paglia','anime','nami','zoro','sanji','pirata','nakama'],a:'One Piece è la vibe! 🏴☠️ La ciurma è sempre pronta. I fan di One Piece e della tech vanno sempre d\'accordo.'},
+        {k:['grazie','thanks','bello','figo','grande','ottimo','cool'],a:'Yo-ho-ho, prego! I Nakama non si ringraziano troppo — un capitano continua a navigare. ⛵ Dai un\'occhiata a "Join My Crew" se vuoi lavorare insieme!'},
+        {k:['ciao','hello','hi','hey','yo','salve'],a:'Ciao! ⛵ Piacere di conoscerti. Chiedimi delle skill di Yahya, dei suoi progetti o della sua esperienza. Come posso aiutarti?'}
+      ],
+      fallback:'Per tutti i Mari, non ho capito! 🤔 Prova a chiedere **skill**, **progetti**, **esperienza** o **contatti**, o tocca una domanda qui sotto.'
+    },
+
+    de:{
+      name:'Crew AI', status:'Online — frag mich', ph:'Frag mich nach Yahya...', close:'Chat schließen',
+      hello:'🏴☠️ Yo-ho-ho! Ich bin Crew AI, Nakama der Strohhüte. Frag mich nach Yahyas Fähigkeiten, Projekten, Erfahrung — oder wie du seiner Crew beitrittst!\n\nTippe unten eine Frage an.',
+      chips:['🧠 Fähigkeiten','💎 Projekte','💼 Erfahrung','✉️ Kontakt','📍 Standort','🏴☠️ Über'],
+      kb:[
+        {k:['wer ist','ueber','über','wer bist','vorstellen','profil'],a:'Yahya Jarray ist Full-Stack-Entwickler und Ingenieur für KI/Automation, aus Tunesien, jetzt in Rom 🇮🇹🇹🇳. Er baut KI-Systeme, die echte Unternehmen antreiben — Lead-Generierung, Terminvereinbarung, Dokumentenverarbeitung — plus wunderschöne thematische Websites.'},
+        {k:['faehigkeiten','fähigkeiten','stack','techno','kann','framework','sprache'],a:'Sein Kern-Stack:\n🐍 Python · ⚡ FastAPI · 🗄️ SQL / SQLAlchemy\n🧠 LLM (OpenAI/DeepSeek/Anthropic) · 🤖 KI-Agenten & Chatbots\n⚙️ GoHighLevel · 🔀 Make.com · 🌊 n8n · 🕸️ Playwright\n💬 WhatsApp/SMS (Twilio) · 📄 OCR · 🐳 Docker · 🧪 pytest · 🖼️ Flet\n🌐 React/TypeScript + Vanilla JS/CSS. Full-Stack, wenn nötig.'},
+        {k:['projekt','portfolio','bau','schatz','gemacht','arbeit'],a:'Er hat 50+ Projekte geliefert. Highlights:\n• 🤖 KI-Agenten, die Leads qualifizieren, Anrufe buchen und auf WhatsApp antworten\n• 🧠 RAG-Chatbots & Dokumenten-/OCR-Verarbeitung\n• 🎨 Schöne Kundenwebsites (Restaurants, Ärzte, IT) — single-file, multilingual\n• 📈 Krypto/Wallet-Analysen & DeFi-Bots\n\nDurchs Blättern der Schatzkammer oben!'},
+        {k:['erfahrung','jahre','wie lange','karriere','arbeit'],a:'3+ Jahre professionelles Bauen. Gestartet in East Blue (Python + APIs), in der Grand Line mit Kundenautomatisierungen (GoHighLevel, HubSpot, Make, n8n) vorangekommen, jetzt im New World mit KI-Agenten, die ein Postfach bearbeiten, einen Anruf buchen und Berichte schreiben.'},
+        {k:['kontakt','email','erreichen','anstellen','linkedin','github','preis','freelance'],a:'Du erreichst Yahya hier:\n• 💼 LinkedIn: linkedin.com/in/yahya-jarray\n• 🐙 GitHub: github.com/jryahia\n• ✉️ Email: in "Join My Crew" unten (klicken zum Anzeigen)\n\nEr ist offen für Freelance-Projekte, Kundenwebsites und KI-Automationen.'},
+        {k:['standort','wo','lebt','basis','rom','tunesien'],a:'Er stammt aus Tunesien und lebt jetzt in Rom, Italien 🇹🇳🇮🇹. Er arbeitet international.'},
+        {k:['ki','agent','chatbot','llm','gpt','automation','whatsapp'],a:'Yahyas Spezialität: KI, die echte Arbeit macht. LLM-gestützte Agenten integriert mit GoHighLevel, HubSpot, Make und n8n — Lead-Qualifizierung, Terminbuchung, Rückrufe bei verpassten Anrufen, Dokumentenverarbeitung und WhatsApp-Verkaufsagenten. Produktionsreif mit Docker.'},
+        {k:['website','web','site','design','frontend','html','css'],a:'Er baut gepflegte, responsive Websites — Luxus-Restaurants, Arzt- & IT-Unternehmensseiten und ein komplettes One-Piece-Dev-Portfolio. Single-file wenn sinnvoll, React/TypeScript wenn mehr nötig ist.'},
+        {k:['luffy','one piece','strohhut','anime','nami','zoro','sanji','pirat','nakama'],a:'One Piece ist das ganze Vibes! 🏴☠️ Die Crew ist immer bereit. One-Piece-Fans und Tech-Liebhaber verstehen sich immer.'},
+        {k:['danke','thanks','schön','schön','cool','toll','gut'],a:'Yo-ho-ho, gerne! Nakama sagen nicht zu oft danke — ein Kapitän segelt einfach weiter. ⛵ Schau in "Join My Crew", wenn du zusammenarbeiten willst!'},
+        {k:['hallo','hi','hey','yo','servus'],a:'Ahoy! ⛵ Schön, dich kennenzulernen. Frag mich nach Yahyas Fähigkeiten, Projekten oder Erfahrung. Wie kann ich helfen?'}
+      ],
+      fallback:'Potzblitz — das habe ich nicht verstanden! 🤔 Frag nach seinen **Fähigkeiten**, **Projekten**, seiner **Erfahrung** oder dem **Kontakt**, oder tippe unten eine Frage an.'
+    },
+
+    ru:{
+      name:'Crew AI', status:'Онлайн — спрашивайте', ph:'Спросите о Яхье...', close:'Закрыть чат',
+      hello:'🏴☠️ Йо-хо-хо! Я Crew AI, накама Соломенной Шляпы. Спросите о навыках Яхьи, проектах, опыте — или как вступить в его команду!\n\nНажмите на вопрос ниже, чтобы начать.',
+      chips:['🧠 Навыки','💎 Проекты','💼 Опыт','✉️ Контакты','📍 Где живёт','🏴☠️ Кто это'],
+      kb:[
+        {k:['кто такой','кто ты','про яхью','расскажи','представь'],a:'Яхья Джаррай — full-stack разработчик и инженер ИИ/автоматизации, родом из Туниса, сейчас в Риме 🇮🇹🇹🇳. Он создаёт ИИ-системы, которые реально двигают бизнес — генерация лидов, запись на приём, обработка документов — и красивые тематические сайты.'},
+        {k:['навыки','стек','технологии','техника','что умеет','фреймворк','язык'],a:'Основной стек:\n🐍 Python · ⚡ FastAPI · 🗄️ SQL / SQLAlchemy\n🧠 LLM (OpenAI/DeepSeek/Anthropic) · 🤖 ИИ-агенты и чат-боты\n⚙️ GoHighLevel · 🔀 Make.com · 🌊 n8n · 🕸️ Playwright\n💬 WhatsApp/SMS (Twilio) · 📄 OCR · 🐳 Docker · 🧪 pytest · 🖼️ Flet\n🌐 React/TypeScript + vanilla JS/CSS. Full-stack, когда нужно.'},
+        {k:['проект','проекты','портфолио','сокровище','сделал','работа'],a:'Он выпустил 50+ проектов. Главное:\n• 🤖 ИИ-агенты, которые квалифицируют лиды, записывают звонки и отвечают клиентам в WhatsApp\n• 🧠 RAG-чат-боты и обработка документов/OCR\n• 🎨 Красивые клиентские сайты (рестораны, врачи, IT) — single-file, мультиязычные\n• 📈 Анализаторы крипты/кошельков и DeFi-боты\n\nЛистайте Сокровищницу выше!'},
+        {k:['опыт','годы','лет','карьера','давно'],a:'3+ года профессиональной разработки. Начал в East Blue (Python + API), вырос в Grand Line на клиентских автоматизациях (GoHighLevel, HubSpot, Make, n8n), а теперь в New World строит ИИ-агентов, которые работают с почтой, записывают звонки и пишут отчёты.'},
+        {k:['контакт','контакты','email','нанять','linkedin','github','цена','фриланс'],a:'Связаться с Яхья можно так:\n• 💼 LinkedIn: linkedin.com/in/yahya-jarray\n• 🐙 GitHub: github.com/jryahia\n• ✉️ Email: показан в разделе "Join My Crew" (нажмите, чтобы показать)\n\nОн открыт к фрилансу, клиентским сайтам и ИИ-автоматизации.'},
+        {k:['где','локация','живёт','база','рим','тунис'],a:'Он родом из Туниса, сейчас живёт в Риме, Италия 🇹🇳🇮🇹. Работает с клиентами по всему миру.'},
+        {k:['ии','агент','чат-бот','бот','llm','gpt','автоматизация','whatsapp'],a:'Специализация Яхьи: ИИ, который делает реальную работу. LLM-агенты, интегрированные с GoHighLevel, HubSpot, Make и n8n — квалификация лидов, запись на приём, обратный звонок за пропущенными, обработка документов и продажи в WhatsApp. Готово к продакшену с Docker.'},
+        {k:['сайт','веб','дизайн','frontend','html','css'],a:'Он делает аккуратные, адаптивные сайты — люкс-рестораны, сайты врачей и IT-компаний, и полноценное One Piece-портфолио разработчика. Single-file где уместно, React/TypeScript когда нужно больше.'},
+        {k:['люффи','one piece','соломенная шляпа','аниме','нами','зоро','санджи','пират','накама'],a:'One Piece — это весь стиль! 🏴☠️ Команда всегда готова. Фанаты One Piece и технари всегда находят общий язык.'},
+        {k:['спасибо','благодарю','thanks','класс','круто','отлично','здорово'],a:'Йо-хо-хо, пожалуйста! Накама не слишком часто благодарят — капитан просто продолжает плыть. ⛵ Загляни в "Join My Crew", если хочешь работать вместе!'},
+        {k:['привет','здравствуй','hello','hi','hey','йо'],a:'Эй! ⛵ Приятно познакомиться. Спрашивай о навыках Яхьи, его проектах или опыте. Чем могу помочь?'}
+      ],
+      fallback:'Будь я проклят, не понял! 🤔 Спроси о его **навыках**, **проектах**, **опыте** или **контакте**, или нажми вопрос ниже.'
+    },
+
+    ja:{
+      name:'Crew AI', status:'オンライン — 何でも聞いて', ph:'ヤヒヤについて聞こう...', close:'チャットを閉じる',
+      hello:'🏴☠️ ヨーホーホー！クルーAIだ、麦わらの一味の仲間だ。ヤヒヤのスキル、プロジェクト、経験について聞いてくれ — 仲間に入る方法も！\n\n下の質問をタップして始めよう。',
+      chips:['🧠 スキル','💎 プロジェクト','💼 経験','✉️ 連絡先','📍 場所','🏴☠️ プロフィール'],
+      kb:[
+        {k:['誰','だれ','プロフィール','紹介','about','説明'],a:'ヤヒヤ・ジャライはフルスタック開発者でAI・自動化エンジニア。チュニジア出身、現在ローマ在住 🇮🇹🇹🇳。リード生成、アポ取得、文書処理など実際のビジネスを動かすAIシステムと、美しいテーマサイトを構築している。'},
+        {k:['スキル','スキル','技術','スタック','できる','フレームワーク','言語'],a:'主要スタック：\n🐍 Python · ⚡ FastAPI · 🗄️ SQL / SQLAlchemy\n🧠 LLM (OpenAI/DeepSeek/Anthropic) · 🤖 AIエージェント＆チャットボット\n⚙️ GoHighLevel · 🔀 Make.com · 🌊 n8n · 🕸️ Playwright\n💬 WhatsApp/SMS (Twilio) · 📄 OCR · 🐳 Docker · 🧪 pytest · 🖼️ Flet\n🌐 React/TypeScript + バニラJS/CSS。必要ならフルスタック。'},
+        {k:['プロジェクト','プロジェクト','ポートフォリオ','宝物','作った','制作'],a:'50以上のプロジェクトをリリース。ハイライト：\n• 🤖 WhatsAppでリードを評価し、電話を予約し、顧客に答えるAIエージェント\n• 🧠 RAGチャットボット＆文書/OCR処理\n• 🎨 美しいクライアントサイト（レストラン、医者、IT）— シングルファイル、多言語\n• 📈 暗号資産/ウォレット分析＆DeFiボット\n\n上の宝物庫を眺めてみて！'},
+        {k:['経験','スキル','年数','キャリア','どのくらい','実績'],a:'プロとして3年以上。East Blueで始まり（Python＋API）、Grand Lineでクライアント自動化（GoHighLevel、HubSpot、Make、n8n）を経験し、今はNew Worldで受信トレイを処理し、電話を予約し、レポートを書くAIエージェントを構築している。'},
+        {k:['連絡','連絡先','メール','依頼','linkedin','github','価格','フリーランス'],a:'ここでヤヒヤに連絡できます：\n• 💼 LinkedIn: linkedin.com/in/yahya-jarray\n• 🐙 GitHub: github.com/jryahia\n• ✉️ メール: 「Join My Crew」で表示（クリックで表示）\n\nフリーランス案件、クライアントサイト、AI自動化の依頼を受け付けています。'},
+        {k:['場所','どこ','在住','拠点','ローマ','チュニジア'],a:'チュニジア出身、現在はイタリア・ローマ在住 🇹🇳🇮🇹。世界中のクライアントと仕事をしています。'},
+        {k:['ai','ai','エージェント','チャットボット','llm','gpt','自動化','whatsapp'],a:'ヤヒヤの得意分野：本当の仕事をするAI。GoHighLevel、HubSpot、Make、n8nと統合されたLLMエージェント — リード評価、アポ予約、着信拒否の折り返し、文書処理、WhatsApp販売エージェント。Dockerで本番対応。'},
+        {k:['サイト','ウェブ','web','デザイン','frontend','html','css'],a:'高級レストラン、医者・IT企業サイト、そして本格的なONE PIECE開発者ポートフォリオなど、洗練されたレスポンシブサイトを構築。適材適所でシングルファイル、必要ならReact/TypeScript。'},
+        {k:['ルフィ','ワンピース','one piece','麦わら','アニメ','ナミ','ゾロ','サンジ','海賊','仲間'],a:'ワンピースがすべてだ！🏴☠️ 乗組員はいつでも準備万端。ワンピースファンとテック好きはいつも気が合う。'},
+        {k:['ありがとう','thanks','すごい','いいね','良い','最高'],a:'ヨーホーホー、どういたしまして！仲間はあまりお礼を言わない — 船長はただ航海を続ける。⛵ 一緒に働きたければ「Join My Crew」をチェック！'},
+        {k:['こんにちは','やあ','hello','hi','hey','おう'],a:'おう！⛵ 会えて嬉しい。ヤヒヤのスキル、プロジェクト、経験について聞いて。何かお手伝いできることは？'}
+      ],
+      fallback:'おやおや、聞き取れなかったよ！🤔 彼の**スキル**、**プロジェクト**、**経験**、**連絡先**について聞くか、下の質問をタップしてくれ。'
+    },
+
+    ar:{
+      name:'Crew AI', status:'متصل على الأنترنت', ph:'اسألني عن يحيى...', close:'إغلاق المحادثة',
+      hello:'🏴☠️ يو-هو-هو! أنا كرو AI، ناكاما من قبعة القش. اسألني عن مهارات يحيى ومشاريعه وخبرته — أو كيف تنضم إلى الطاقم!\n\nاضغط على سؤال أدناه للبدء.',
+      chips:['🧠 المهارات','💎 المشاريع','💼 الخبرة','✉️ التواصل','📍 الموقع','🏴☠️ من هو'],
+      kb:[
+        {k:['من هو','من انت','تعريف','عرّفني','نبذة'],a:'يحيى جاراي مطوّر full-stack ومهندس ذكاء اصطناعي وأتمتة، من تونس ويقيم الآن في روما 🇮🇹🇹🇳. يبني أنظمة ذكاء اصطناعي تُشغّل أعمالاً حقيقية — توليد العملاء وحجز المواعيد ومعالجة المستندات — بالإضافة إلى مواقع ويب جميلة ذات طابع خاص.'},
+        {k:['مهارات','المهارات','ستاك','تقنيات','ماذا يعرف','فريم','لغة'],a:'أبرز تقنياته:\n🐍 Python · ⚡ FastAPI · 🗄️ SQL / SQLAlchemy\n🧠 LLM (OpenAI/DeepSeek/Anthropic) · 🤖 وكلاء وروبوتات محادثة\n⚙️ GoHighLevel · 🔀 Make.com · 🌊 n8n · 🕸️ Playwright\n💬 WhatsApp/SMS (Twilio) · 📄 OCR · 🐳 Docker · 🧪 pytest · 🖼️ Flet\n🌐 React/TypeScript + JS/CSS. Full-stack عندما يتطلب الأمر.'},
+        {k:['مشروع','مشاريع','بورتفوليو','كنز','صنع','عمل'],a:'أنجز 50+ مشروعاً. أبرزها:\n• 🤖 وكلاء ذكاء اصطناعي يؤهلون العملاء ويحجزون المكالمات ويردّون عبر WhatsApp\n• 🧠 روبوتات RAG ومعالجة مستندات/OCR\n• 🎨 مواقع عملاء جميلة (مطاعم، أطباء، IT) — ملف واحد، متعددة اللغات\n• 📈 محللات عملات رقمية/محافظ وبوتات DeFi\n\nتصفّح خزينة الكنوز بالأعلى!'},
+        {k:['خبرة','الخبرة','سنوات','كم','مهنة','عمل'],a:'+3 سنوات في التطوير الاحترافي. بدأ في East Blue (Python + APIs)، تطور في Grand Line مع أتمتة للعملاء (GoHighLevel, HubSpot, Make, n8n)، والآن في New World يبني وكلاء ذكاء اصطناعي يعالجون البريد ويحجزون المكالمات ويكتبون التقارير.'},
+        {k:['تواصل','تواصل','بريد','إيميل','توظيف','linkedin','github','سعر','فريلانس'],a:'يمكنك التواصل مع يحيى هنا:\n• 💼 LinkedIn: linkedin.com/in/yahya-jarray\n• 🐙 GitHub: github.com/jryahia\n• ✉️ البريد: يُعرض في قسم «Join My Crew» (انقر للإظهار)\n\nمفتوح لمشاريع الفريلانس ومواقع العملاء وأتمتة الذكاء الاصطناعي.'},
+        {k:['أين','موقع','يعيش','قاعدة','روما','تونس'],a:'من تونس، ويعيش الآن في روما، إيطاليا 🇹🇳🇮🇹. يعمل مع عملاء دوليين.'},
+        {k:['ذكاء','ذكاء اصطناعي','وكيل','روبوت','llm','gpt','أتمتة','whatsapp'],a:'تخصص يحيى: ذكاء اصطناعي يعمل فعلاً. وكلاء LLM مدمجون مع GoHighLevel وHubSpot وMake وn8n — تأهيل عملاء، حجز مواعيد، معاودة المكالمات الفائتة، معالجة مستندات، وكلاء مبيعات على WhatsApp. جاهز للإنتاج مع Docker.'},
+        {k:['موقع','مواقع','ويب','تصميم','frontend','html','css'],a:'يبني مواقع ويب أنيقة ومتجاوبة — مطاعم فاخرة، مواقع أطباء وشركات IT، وبورتفوليو مطوّر كامل بطابع One Piece. ملف واحد حيث يلائم، وReact/TypeScript عندما تحتاجه.'},
+        {k:['لوفي','ون بيس','one piece','قبعة القش','أنمي','نامي','زورو','سانجي','قرصان','ناكام'],a:'One Piece هو كل شيء! 🏴☠️ الطاقم دائماً جاهز. محبّو One Piece ومحبّو التقنية ينسجمون دائماً.'},
+        {k:['شكرا','شكراً','رائع','ممتاز','جيد','حلو'],a:'يو-هو-هو، لا شكر على واجب! الناكاما لا يشكرون كثيراً — القبطان يواصل الإبحار. ⛵ ألقِ نظرة على «Join My Crew» إذا أردت العمل معاً!'},
+        {k:['مرحبا','أهلا','اهلين','سلام','هلا'],a:'أهلاً! ⛵ سررت بلقائك. اسألني عن مهارات يحيى أو مشاريعه أو خبرته. بماذا يمكنني المساعدة؟'}
+      ],
+      fallback:'عذراً! لم أفهم. 🤔 اسأل عن **المهارات** أو **المشاريع** أو **الخبرة** أو **التواصل**، أو اضغط على سؤال أدناه.'
+    },
+
+    _default:{
+      name:'Crew AI', status:'Online', ph:'Ask me...', close:'Close chat',
+      hello:'🏴☠️ Ahoy! I\'m Crew AI, Nakama of the Straw Hats. Ask me about Yahya\'s skills, projects, experience — or how to join his crew!',
+      chips:['🧠 Skills','💎 Projects','💼 Experience','✉️ Contact','📍 Location','🏴☠️ About'],
+      kb:[ 
+        {k:['who is','about','who are you','skill','project','experience','contact','location','ai','chatbot','luffy','one piece','hello','thanks'],a:'Ahoy! Ask me about Yahya\'s skills, projects, experience or contact. What can I help you with?'}
+      ],
+      fallback:'Shiver me timbers — I didn\'t catch that! 🤔 Try asking about his **skills**, **projects**, **experience** or **contact**.'
+    }
   };
 
-  // ---- Knowledge base: [keywords, answer] intents ----
-  var KB = [
-    {k:['who is','about','who are you','who\'s','tell me about yahya','about yahya','introduce'],a:'Yahya Jarray is a full-stack developer and AI/automation engineer from Tunisia, now based in Rome. He builds AI-powered systems that run real businesses — chatbacks, lead qualification, appointment setters, document processing — plus beautiful themed websites. Think of him as a developer who works like a Straw Hat captain: keeps his crew (his stack) loyal and ships what actually works.'},
-    {k:['skill','stack','tech','technology','program','language','what can','know','expert','framework'],a:'His core stack: 🐍 Python · ⚡ FastAPI · 🗄️ SQL / SQLAlchemy · 🧠 LLM integration (OpenAI/DeepSeek/Anthropic) · 🤖 AI agents & chatbots · ⚙️ GoHighLevel · 🔀 Make.com · 🌊 n8n · 🕸️ Playwright/scraping · 💬 WhatsApp/SMS (Twilio) · 📄 document/OCR processing · 🐳 Docker · 🧪 pytest · 🖼️ Flet · 🌐 React/TypeScript + vanilla JS/CSS.\n\nHe goes full-stack when the job needs it.'},
-    {k:['project','build','portfolio','treasure','made','work','repos','repo'],a:'He\'s shipped 50+ projects. Highlights:\n• 🤖 AI agents that qualify leads, book calls & answer customers on WhatsApp (GoHighLevel, HubSpot, Make, n8n)\n• 🧠 RAG chatbots & AI document/OCR processing\n• 🎨 Beautiful client websites (restaurants, doctors, IT shops) — single-file, multilingual\n• 📈 Crypto/wallet analyzers & DeFi bots\n\nBrowse the full Treasure Vault above — click any card to open it!'},
-    {k:['experience','years','how long','career','job','have you been','time'],a:'3+ years of professional building. He started in East Blue (learning Python and APIs), grinded in the Grand Line shipping client automations for GoHighLevel, HubSpot, Make and n8n, and is now in the New World building AI agents that work an inbox, book a call, and write reports.'},
-    {k:['contact','hire','email','reach','meet','get in touch','link','linkedin','github','call','freelance','price','cost','rate','commission'],a:'You can reach Yahya here:\n• 💼 LinkedIn: linkedin.com/in/yahya-jarray\n• 🐙 GitHub: github.com/jryahia\n• ✉️ Email: revealed in the "Join My Crew" section below (click to reveal)\n\nHe\'s open to freelance projects, client websites, and AI automation builds. Tell him what you need!'},
-    {k:['location','where','live','based','rome','tunisia','country','city'],a:'He\'s originally from Tunisia and now based in Rome, Italy 🇮🇹🇹🇳. He works with clients internationally.'},
-    {k:['ai','agent','chatbot','llm','gpt','automation','whatsapp','automat'],a:'Yahya\'s specialty: AI that does real work. He builds LLM-powered agents integrated with GoHighLevel, HubSpot, Make and n8n — chatbots that qualify leads, appointment setters that book calls, missed-call text-backs, document processors, and WhatsApp sales agents. Production-grade, Docker-ready, deployed anywhere.'},
-    {k:['website','web','site','design','frontend','html','css'],a:'He builds polished, responsive websites — from luxury restaurant sites (gold/black, multilingual) to doctor & IT business sites and a full One Piece-themed dev portfolio. Single-file where it makes sense, React/TypeScript when it needs more power.'},
-    {k:['luffy','one piece','straw hat','anime','nami','zoro','sanji','pirate'],a:'One Piece is the whole vibe! 🏴☠️ The crew is always ready. If you\'re a One Piece fan and a tech lover, we\'ll get along great.'},
-    {k:['thanks','thank','thx','gracias','merci','grazie','danke','nice','cool','awesome','great','love'],a:'Yo-ho-ho, you\'re welcome! Nakama don\'t say thanks too much — a captain just keeps sailing. ⛵ If you want to work together, check out the "Join My Crew" section!'},
-    {k:['hello','hi','hey','yo','ahoy','yo-ho','sup','hola','bonjour','ciao'],a:'Ahoy there! ⛵ Great to meet you. Ask me about Yahya\'s skills, his projects, his experience — or just chat. What can I help you with?'}
-  ];
-
-  var FALLBACK = 'Shiver me timbers — I didn\'t catch that one! 🤔 Try asking about his **skills**, **projects**, **experience**, **contact**, or tap a quick question below.';
-
   // ---- Build widget DOM ----
-  function getUI(){var l=(typeof currentLanguage!=='undefined'?currentLanguage:'en')||'en';return UI[l]||UI.default||UI.en}
-  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-  function md(s){ // tiny formatter: **bold**
-    return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
-  }
+  function getLang(){ var l=(typeof currentLanguage!=='undefined'?currentLanguage:'en')||'en'; return l; }
+  function getL(){ var l=getLang(); return L10N[l]||L10N._default||L10N.en; }
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function md(s){ return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>'); }
+  function cap(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
 
   var H=document.createElement('div');
-  H.id='chat-window';
-  H.setAttribute('aria-hidden','true');
+  H.id='chat-window'; H.setAttribute('aria-hidden','true');
   H.innerHTML=
     '<div class="chat-header">'+
       '<div class="chat-avatar">🏴‍☠️</div>'+
       '<div class="chat-titles"><div class="chat-name">Crew AI</div><div class="chat-status"><span class="dot"></span><span class="chat-status-txt">Online</span></div></div>'+
-      '<button class="chat-close" id="chat-close" aria-label="Close chat">×</button>'+
+      '<button class="chat-close" id="chat-close">×</button>'+
     '</div>'+
     '<div class="chat-messages" id="chat-messages"></div>'+
     '<div class="chat-chips" id="chat-chips"></div>'+
     '<div class="chat-input">'+
-      '<input type="text" id="chat-input" placeholder="Ask me..." autocomplete="off">'+
+      '<input type="text" id="chat-input" autocomplete="off">'+
       '<button class="chat-send" id="chat-send" aria-label="Send">➤</button>'+
     '</div>';
   document.body.appendChild(H);
@@ -60,18 +188,35 @@
   L.innerHTML='<span class="launcher-emoji">💬</span>';
   document.body.appendChild(L);
 
-  var box=H.querySelector('#chat-messages'),chipsEl=H.querySelector('#chat-chips'),
-      inp=H.querySelector('#chat-input'),wnd=H;
-  var open=false, typed=false;
+  var box=H.querySelector('#chat-messages'), chipsEl=H.querySelector('#chat-chips'),
+      inp=H.querySelector('#chat-input'), wnd=H;
+  var open=false, greeted=false, curLang=getLang();
 
-  function applyUI(){
-    var u=getUI();
-    H.querySelector('.chat-name').textContent=u.name;
-    H.querySelector('.chat-status-txt').textContent=u.status;
-    inp.placeholder=u.ph;
-    H.querySelector('.chat-close').setAttribute('aria-label','Close chat');
+  function renderChips(){
+    var Lg=getL();
+    chipsEl.innerHTML='';
+    Lg.chips.forEach(function(c){
+      var b=document.createElement('button'); b.className='chip-reply'; b.textContent=c;
+      b.onclick=function(){ inp.value=c.replace(/^[^ ]+\s*/,''); handle(inp.value); };
+      chipsEl.appendChild(b);
+    });
   }
-  applyUI();
+
+  function applyUI(preserve){
+    var old=getLang();
+    var Lg=getL();
+    H.querySelector('.chat-name').textContent=Lg.name;
+    H.querySelector('.chat-status-txt').textContent=Lg.status;
+    inp.placeholder=Lg.ph;
+    var cL=H.querySelector('#chat-close'); cL.setAttribute('aria-label',Lg.close);
+    renderChips();
+    // If language changed and chat is open, greet in the new language
+    if(preserve && old!==curLang && open && !greeted){
+      setTimeout(function(){ addMsg(Lg.hello,'bot') },200);
+      greeted=true;
+    }
+    curLang=old;
+  }
 
   function addMsg(text,who){
     var m=document.createElement('div');
@@ -85,58 +230,67 @@
     box.appendChild(m); box.scrollTop=box.scrollHeight; return m;
   }
 
-  // ---- Intent matching ----
+  // ---- Intent matching (language-aware) ----
   function answer(q){
-    q=q.toLowerCase().replace(/[?!.,]/g,' ').replace(/\s+/g,' ').trim();
+    q=String(q||'').toLowerCase().replace(/[?!.,;]/g,' ').replace(/\s+/g,' ').trim();
+    if(!q) return null;
+    var Lg=getL();
     var best=null,bestScore=0;
-    KB.forEach(function(intent){
-      var score=0;
-      intent.k.forEach(function(kw){ if(q.indexOf(kw)!==-1) score+=kw.length; });
-      if(score>bestScore){bestScore=score;best=intent}
+    // Also match in the CURRENT language's keywords (locals) and EN fallback.
+    var sets=[ Lg.kb ];
+    if(getLang()!=='en') sets.push(L10N.en.kb);
+    sets.forEach(function(kb){
+      kb.forEach(function(intent){
+        var score=0;
+        intent.k.forEach(function(kw){ if(q.indexOf(kw.toLowerCase())!==-1) score+=kw.length; });
+        if(score>bestScore){bestScore=score;best=intent;}
+      });
     });
     return best && bestScore>0 ? best.a : null;
   }
 
   function handle(text){
-    if(!text.trim())return;
+    if(!text.trim()) return;
     addMsg(text,'user');
     var t=addTyping();
     setTimeout(function(){
       t.remove();
-      var a=answer(text)||FALLBACK;
+      var a=answer(text)||getL().fallback;
       addMsg(a,'bot');
-    },450+Math.random()*350);
+    },420+Math.random()*350);
   }
 
-  // ---- Quick replies (preset) ----
-  var CHIPS=['🧠 Skills','💎 Projects','💼 Experience','✉️ Contact','📍 Location','🏴‍☠️ About Yahya'];
-  function renderChips(){
-    chipsEl.innerHTML='';
-    CHIPS.forEach(function(c){
-      var b=document.createElement('button'); b.className='chip-reply'; b.textContent=c;
-      b.onclick=function(){inp.value=c;handle(c);};
-      chipsEl.appendChild(b);
-    });
-  }
-  renderChips();
-
-  // ---- open/close ----
   function toggle(force){
     open=(typeof force==='boolean')?force:!open;
     wnd.classList.toggle('open',open);
     wnd.setAttribute('aria-hidden',open?'false':'true');
     if(open){
-      if(!typed){typed=true;setTimeout(function(){addMsg(getUI().hello,'bot')},300);}
-      setTimeout(function(){inp.focus()},250);
+      if(!greeted){ greeted=true; setTimeout(function(){ addMsg(getL().hello,'bot'); },300); }
+      setTimeout(function(){ inp.focus(); },250);
     }
   }
-  L.addEventListener('click',function(){toggle()});
-  H.querySelector('#chat-close').addEventListener('click',function(){toggle(false)});
 
-  // Send logic
-  H.querySelector('#chat-send').addEventListener('click',function(){handle(inp.value);inp.value=''});
-  inp.addEventListener('keydown',function(e){if(e.key==='Enter'){handle(inp.value);inp.value=''}});
+  L.addEventListener('click',function(){ toggle(); });
+  H.querySelector('#chat-close').addEventListener('click',function(){ toggle(false); });
+  H.querySelector('#chat-send').addEventListener('click',function(){ handle(inp.value); inp.value=''; });
+  inp.addEventListener('keydown',function(e){ if(e.key==='Enter'){ handle(inp.value); inp.value=''; } });
 
-  // Tip: update UI text live if language changes mid-session
-  document.addEventListener('languageChanged',applyUI);
+  // Live language switching — two independent mechanisms for robustness:
+  // 1) i18n.js dispatches 'languageChanged' (CustomEvent)
+  // 2) a lightweight watcher polls currentLanguage as a fallback (works even if
+  //    CustomEvent dispatch is blocked/unreliable in an embedded/sandboxed context)
+  document.addEventListener('languageChanged',function(){
+    syncLanguage(true);
+  });
+  setInterval(function(){
+    var l=(typeof currentLanguage!=='undefined'?currentLanguage:'en')||'en';
+    if(l!==curLang){ curLang=l; syncLanguage(true); }
+  },600);
+  function syncLanguage(greetOnChange){
+    var newLang=getLang();
+    if(newLang!==curLang){ curLang=newLang; applyUI(greetOnChange&&open&&!greeted); }
+    else { applyUI(false); }
+  }
+
+  applyUI(false);
 })();

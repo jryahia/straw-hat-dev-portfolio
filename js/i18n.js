@@ -70,6 +70,11 @@ function setLanguage(lang) {
     } else {
         translatePage();
     }
+
+    // Broadcast language change so widgets (chatbot, etc.) can update live
+    try {
+        window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: lang } }));
+    } catch (e) { /* ignore */ }
 }
 
 // Translate page

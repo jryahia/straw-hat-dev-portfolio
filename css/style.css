@@ -466,12 +466,12 @@ nav {
 .character-indicator {
     position: fixed;
     left: 48px;
-    bottom: 48px;
+    bottom: 15px;
     z-index: 100;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 16px 24px;
+    padding: 12px 22px;
     backdrop-filter: blur(10px);
 }
 
@@ -1267,7 +1267,7 @@ nav {
     .nav-links { display: none; }
     .nav-arrows { display: none; }
     #dark-mode-toggle { width: 40px; height: 40px; font-size: 18px; }
-    .character-indicator { left: 16px; bottom: 100px; padding: 12px 16px; }
+    .character-indicator { left: 16px; bottom: 15px; padding: 12px 16px; }
     .section-content { padding: 0 20px; }
     #projects-content { padding: 80px 20px 60px; }
     #about-content { justify-content: center; }
@@ -1304,7 +1304,7 @@ nav {
     nav { padding: 12px 16px; }
     .logo-text { font-size: 14px; }
     .logo-icon { font-size: 24px; }
-    .character-indicator { left: 12px; bottom: 90px; padding: 10px 14px; }
+    .character-indicator { left: 12px; bottom: 15px; padding: 10px 14px; }
     .character-name { font-size: 14px; }
     .character-role { font-size: 10px; }
     .nav-arrows { display: none; }
