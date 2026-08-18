@@ -1,8 +1,8 @@
 /* ==== Straw Hat Chatbot Widget ==== */
 
-/* Dock the audio player just above the chat FAB so the corner shows one tidy,
-   professional control cluster: chat button anchored at 20px, music player above it. */
-.audio-player{bottom:88px !important}
+/* Dock the audio player on the SAME bottom row as the chat FAB, left of it:
+   chat button anchored at 20px, music player beside it (20 + 54 + 12 = 86px). */
+.audio-player{bottom:20px !important;right:86px !important}
 
 /* Floating launcher — anchored to the bottom-right corner at 20px (the FAB). */
 #chat-launcher{
@@ -69,6 +69,7 @@
 
 /* RTL support */
 html[dir="rtl"] #chat-launcher{right:auto;left:20px}
+html[dir="rtl"] .audio-player{right:auto;left:86px}
 html[dir="rtl"] #chat-window{right:auto;left:16px;bottom:190px}
 html[dir="rtl"] .msg.bot{align-self:flex-start}
 html[dir="rtl"] .msg.user{align-self:flex-end}
@@ -76,8 +77,10 @@ html[dir="rtl"] .msg.user{align-self:flex-end}
 /* Mobile — compact corner cluster, FAB still 20px */
 @media(max-width:640px){
   #chat-launcher{bottom:20px;right:16px;width:50px;height:50px}
+  .audio-player{right:78px !important}
   #chat-window{right:8px;left:8px;width:auto;bottom:170px;height:min(460px,calc(100vh - 200px))}
   html[dir="rtl"] #chat-launcher{right:auto;left:16px}
+  html[dir="rtl"] .audio-player{right:auto;left:78px}
   html[dir="rtl"] #chat-window{left:8px;right:8px}
 }
 @media(prefers-reduced-motion:reduce){

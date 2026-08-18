@@ -105,8 +105,8 @@
     }
     
     .audio-player {
-        bottom: max(24px, env(safe-area-inset-bottom));
-        right: max(24px, env(safe-area-inset-right));
+        bottom: max(20px, env(safe-area-inset-bottom));
+        right: max(86px, calc(env(safe-area-inset-right) + 86px));
     }
     
     .character-indicator {
