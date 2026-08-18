@@ -993,7 +993,13 @@ function openProjectModal(id) {
   document.getElementById('modal-tech-stack').innerHTML = p.tech.map(t => `<span class="tech-badge">${t}</span>`).join('');
   document.getElementById('modal-features').innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
   document.getElementById('modal-github').href = p.github;
-  document.getElementById('modal-demo').href = p.demo;
+  const demoBtn = document.getElementById('modal-demo');
+  if (demoBtn) {
+    // Backend/AI tools often have no public live demo — hide the dead button
+    // instead of rendering href="" (clicking it reloads the page).
+    demoBtn.href = p.demo || '#';
+    demoBtn.style.display = p.demo ? '' : 'none';
+  }
   const catEl = document.getElementById('modal-cat');
   if (catEl) catEl.textContent = p.category ? `${catLabel(p.category)} Project` : '';
   document.getElementById('project-modal').classList.add('active');
