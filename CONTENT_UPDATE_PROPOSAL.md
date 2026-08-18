@@ -61,7 +61,7 @@ grouped — each line: proposed tag + the concrete evidence backing it.
 - Docker — Dockerfile in 19 repos, docker-compose in 7.
 - Testing — pytest (18) + pytest-asyncio (15).
 
-### ⚠️ Skills REMOVED because the evidence does NOT support them
+### <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>️ Skills REMOVED because the evidence does NOT support them
 - React — 0 real usages. Only aspirational/README mentions.
 - Node.js — 0 real usages as a backend. The site itself is vanilla JS.
 - TailwindCSS — 0 real usages.

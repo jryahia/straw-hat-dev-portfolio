@@ -144,7 +144,7 @@ const projectsData = [
   {
     id: 10,
     category: 'web',
-    character: '🍝',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3c0 2.5-2 5-4 5-2.5 0-4-2.5-4-5 0-2.5 2-5 4-5 2.5 0 4 2.5 4 5z"/><path d="M9 12c0 2.5 2 5 4 5 2.5 0 4-2.5 4-5 0-2.5-2-5-4-5-2.5 0-4 2.5-4 5z"/><path d="M15 21c0 2.5-2 5-4 5-2.5 0-4-2.5-4-5 0-2.5 2-5 4-5 2.5 0 4 2.5 4 5z"/></svg>',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'La Bontà Ristorante',
     shortDesc: 'Premium Italian restaurant website with reservations and WhatsApp ordering.',

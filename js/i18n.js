@@ -169,9 +169,9 @@ const translations = {
             flet: 'Flet'
         },
         projects: {
-            label: '💎 Treasure Vault',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 4v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7l4-4z"/><path d="M10 12l2 2 4-4"/></svg> Treasure Vault',
             title: 'Legendary Projects',
-            subtitle: 'Click any treasure to explore! 🏴☠️',
+            subtitle: 'Click any treasure to explore! <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'Search projects...',
             catAll: 'All', catAi: 'AI', catAutomation: 'Automation', catWeb: 'Websites',
             brewing: '⚗️ Still Brewing...'
@@ -183,7 +183,7 @@ const translations = {
         subProjects: {
             back: '← Back to Treasures',
             restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> Sanji\'s Kitchen — Choose Your Feast',
-            doctorsTitle: '🦌 Chopper\'s Clinic — Choose Your Treatment'
+            doctorsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M14 3v4"/><path d="M10 19h4"/><path d="M12 15v4"/><path d="M8 11h8"/><path d="M6 15l2-4 4 4"/><path d="M16 15l-2-4-4 4"/></svg> Chopper\'s Clinic — Choose Your Treatment'
         },
         contact: {
             label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> Nakama Wanted',
@@ -246,9 +246,9 @@ const translations = {
             flet: 'Flet'
         },
         projects: {
-            label: '💎 Coffre aux Trésors',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 4v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7l4-4z"/><path d="M10 12l2 2 4-4"/></svg> Coffre aux Trésors',
             title: 'Projets Légendaires',
-            subtitle: 'Cliquez sur un trésor pour explorer ! 🏴☠️',
+            subtitle: 'Cliquez sur un trésor pour explorer ! <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'Rechercher des projets...',
             catAll: 'Tous', catAi: 'IA', catAutomation: 'Automatisation', catWeb: 'Sites web',
             brewing: '⚗️ En Préparation...'
@@ -260,7 +260,7 @@ const translations = {
         subProjects: {
             back: '← Retour aux Trésors',
             restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> Cuisine de Sanji — Choisissez Votre Festin',
-            doctorsTitle: '🦌 Clinique de Chopper — Choisissez Votre Traitement'
+            doctorsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M14 3v4"/><path d="M10 19h4"/><path d="M12 15v4"/><path d="M8 11h8"/><path d="M6 15l2-4 4 4"/><path d="M16 15l-2-4-4 4"/></svg> Clinique de Chopper — Choisissez Votre Traitement'
         },
         contact: {
             label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> Nakama Recherché',
@@ -323,9 +323,9 @@ const translations = {
             flet: 'Flet'
         },
         projects: {
-            label: '💎 Forziere dei Tesori',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 4v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7l4-4z"/><path d="M10 12l2 2 4-4"/></svg> Forziere dei Tesori',
             title: 'Progetti Leggendari',
-            subtitle: 'Clicca su un tesoro per esplorare! 🏴☠️',
+            subtitle: 'Clicca su un tesoro per esplorare! <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'Cerca progetti...',
             catAll: 'Tutti', catAi: 'IA', catAutomation: 'Automazione', catWeb: 'Siti web',
             brewing: '⚗️ In Preparazione...'
@@ -337,7 +337,7 @@ const translations = {
         subProjects: {
             back: '← Torna ai Tesori',
             restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> Cucina di Sanji — Scegli Il Tuo Banchetto',
-            doctorsTitle: '🦌 Clinica di Chopper — Scegli Il Tuo Trattamento'
+            doctorsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M14 3v4"/><path d="M10 19h4"/><path d="M12 15v4"/><path d="M8 11h8"/><path d="M6 15l2-4 4 4"/><path d="M16 15l-2-4-4 4"/></svg> Clinica di Chopper — Scegli Il Tuo Trattamento'
         },
         contact: {
             label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> Nakama Ricercato',
@@ -400,9 +400,9 @@ const translations = {
             flet: 'Flet'
         },
         projects: {
-            label: '💎 Schatzkammer',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 4v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7l4-4z"/><path d="M10 12l2 2 4-4"/></svg> Schatzkammer',
             title: 'Legendäre Projekte',
-            subtitle: 'Klicke auf einen Schatz zum Erkunden! 🏴☠️',
+            subtitle: 'Klicke auf einen Schatz zum Erkunden! <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'Projekte suchen...',
             catAll: 'Alle', catAi: 'KI', catAutomation: 'Automatisierung', catWeb: 'Websites',
             brewing: '⚗️ In Vorbereitung...'
@@ -414,7 +414,7 @@ const translations = {
         subProjects: {
             back: '← Zurück zu Schätzen',
             restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> Sanjis Küche — Wähle Dein Festmahl',
-            doctorsTitle: '🦌 Choppers Klinik — Wähle Deine Behandlung'
+            doctorsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M14 3v4"/><path d="M10 19h4"/><path d="M12 15v4"/><path d="M8 11h8"/><path d="M6 15l2-4 4 4"/><path d="M16 15l-2-4-4 4"/></svg> Choppers Klinik — Wähle Deine Behandlung'
         },
         contact: {
             label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> Nakama Gesucht',
@@ -477,9 +477,9 @@ const translations = {
             flet: 'Flet'
         },
         projects: {
-            label: '💎 Хранилище Сокровищ',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 4v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7l4-4z"/><path d="M10 12l2 2 4-4"/></svg> Хранилище Сокровищ',
             title: 'Легендарные Проекты',
-            subtitle: 'Нажмите на сокровище, чтобы исследовать! 🏴☠️',
+            subtitle: 'Нажмите на сокровище, чтобы исследовать! <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'Поиск проектов...',
             catAll: 'Все', catAi: 'ИИ', catAutomation: 'Автоматизация', catWeb: 'Сайты',
             brewing: '⚗️ В Разработке...'
@@ -491,7 +491,7 @@ const translations = {
         subProjects: {
             back: '← Назад к Сокровищам',
             restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> Кухня Санджи — Выберите Ваш Пир',
-            doctorsTitle: '🦌 Клиника Чоппера — Выберите Ваше Лечение'
+            doctorsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M14 3v4"/><path d="M10 19h4"/><path d="M12 15v4"/><path d="M8 11h8"/><path d="M6 15l2-4 4 4"/><path d="M16 15l-2-4-4 4"/></svg> Клиника Чоппера — Выберите Ваше Лечение'
         },
         contact: {
             label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> Накама Разыскивается',
@@ -554,9 +554,9 @@ const translations = {
             flet: 'Flet'
         },
         projects: {
-            label: '💎 宝物庫',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 4v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7l4-4z"/><path d="M10 12l2 2 4-4"/></svg> 宝物庫',
             title: '伝説のプロジェクト',
-            subtitle: '宝物をクリックして探索！🏴☠️',
+            subtitle: '宝物をクリックして探索！<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'プロジェクトを検索...',
             catAll: 'すべて', catAi: 'AI', catAutomation: '自動化', catWeb: 'ウェブサイト',
             brewing: '⚗️ 開発中...'
@@ -568,7 +568,7 @@ const translations = {
         subProjects: {
             back: '← 宝物に戻る',
             restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> サンジのキッチン — ご馳走を選んでください',
-            doctorsTitle: '🦌 チョッパーの診療所 — 治療を選んでください'
+            doctorsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M14 3v4"/><path d="M10 19h4"/><path d="M12 15v4"/><path d="M8 11h8"/><path d="M6 15l2-4 4 4"/><path d="M16 15l-2-4-4 4"/></svg> チョッパーの診療所 — 治療を選んでください'
         },
         contact: {
             label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> 仲間募集',
@@ -631,9 +631,9 @@ const translations = {
             flet: 'Flet'
         },
         projects: {
-            label: '💎 خزينة الكنوز',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 4v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7l4-4z"/><path d="M10 12l2 2 4-4"/></svg> خزينة الكنوز',
             title: 'مشاريع أسطورية',
-            subtitle: 'انقر على أي كنز للاستكشاف! 🏴☠️',
+            subtitle: 'انقر على أي كنز للاستكشاف! <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'البحث عن مشاريع...',
             catAll: 'الكل', catAi: 'الذكاء الاصطناعي', catAutomation: 'الأتمتة', catWeb: 'المواقع',
             brewing: '⚗️ قيد التطوير...'
@@ -645,7 +645,7 @@ const translations = {
         subProjects: {
             back: '→ العودة للكنوز',
             restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> مطبخ سانجي — اختر وليمتك',
-            doctorsTitle: '🦌 عيادة تشوبر — اختر علاجك'
+            doctorsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M14 3v4"/><path d="M10 19h4"/><path d="M12 15v4"/><path d="M8 11h8"/><path d="M6 15l2-4 4 4"/><path d="M16 15l-2-4-4 4"/></svg> عيادة تشوبر — اختر علاجك'
         },
         contact: {
             label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> مطلوب ناكاما',
