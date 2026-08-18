@@ -985,7 +985,7 @@ let cachedTreasureCards;
 function openProjectModal(id) {
   const p = projectsData.find(x => x.id === id);
   if (!p) return;
-  document.getElementById('modal-character').textContent = p.character;
+  document.getElementById('modal-character').innerHTML = p.character;
   document.getElementById('modal-title').textContent = p.name;
   document.getElementById('modal-subtitle').textContent = p.fullDesc;
   document.getElementById('modal-image').src = p.image;
