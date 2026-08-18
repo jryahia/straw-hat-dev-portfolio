@@ -669,7 +669,7 @@ const projectsData = [
     name: 'WhatsApp Sales Agent',
     shortDesc: 'A configurable WhatsApp AI sales agent for small businesses, end to end.',
     fullDesc: 'A production-grade WhatsApp business assistant that handles product Q&A, order building, and price negotiation over WhatsApp via Twilio, with guardrail-based human handoff, a server-side negotiation validator that never trusts LLM math for money, encrypted keys, and a full admin dashboard.',
-    image: 'https://images.unsplash.com/photo-1556147023-43c64727d0f4?w=800',
+    image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=800',
     tech: ['Python', 'FastAPI', 'Twilio', 'DeepSeek', 'SQLAlchemy'],
     features: ['Zero-hardcodes config', 'Guardrail handoff', 'Negotiation validator', 'Encrypted API keys', 'Admin dashboard'],
     github: 'https://github.com/jryahia/whatsapp-sales-agent',
