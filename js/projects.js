@@ -18,7 +18,7 @@ const projectsData = [
   {
     id: 2,
     category: 'ai',
-    character: '📊',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>',
     bounty: '⭐ LUFFY\'S TREASURE',
     name: 'Data Enricher',
     shortDesc: 'AI Data Enrichment Pipeline — Upload CSV/JSON, enrich with AI, export enriched data.',
@@ -80,7 +80,7 @@ const projectsData = [
   {
     id: 6,
     category: 'automation',
-    character: '⚡',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
     bounty: '🔥 ZORO\'S TREASURE',
     name: 'n8n Workflow Agent',
     shortDesc: 'AI agent that generates and manages n8n automation workflows.',
@@ -127,7 +127,7 @@ const projectsData = [
   {
     id: 9,
     category: 'automation',
-    character: '🚀',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>',
     bounty: '💰 NAMI\'S TREASURE',
     name: 'Meme Coin Scanner',
     shortDesc: 'Multi-source meme coin scanner — discover tokens before they pump.',
@@ -221,7 +221,7 @@ const projectsData = [
   {
     id: 15,
     category: 'ai',
-    character: '🍽️',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>',
     bounty: '🌟 CHOPPER\'S TREASURE',
     name: 'Menu Analyzer SDK',
     shortDesc: 'AI Menu Analyzer — OCR + 64-language dish analysis via GPT-4 Vision.',
@@ -238,7 +238,7 @@ const projectsData = [
   {
     id: 16,
     category: 'ai',
-    character: '🔍',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
     bounty: '📚 ROBIN\'S TREASURE',
     name: 'Code Review Assistant',
     shortDesc: 'AI-powered code review automation with LLM analysis.',
@@ -286,7 +286,7 @@ const projectsData = [
     id: 19,
     category: 'automation',
     character: '🤖',
-    bounty: '🔧 FRANKY\'S TREASURE',
+    bounty: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg> FRANKY\'S TREASURE',
     name: 'Competitor Monitor Bot',
     shortDesc: 'E-commerce competitor surveillance with Playwright + OpenAI + Telegram.',
     fullDesc: 'An automated e-commerce competitor monitoring bot that uses Playwright for stealth browsing, OpenAI for analysis, and Telegram for alerts. Tracks competitor pricing, product changes, stock status, and sends real-time notifications with a Flet desktop dashboard.',
@@ -301,7 +301,7 @@ const projectsData = [
     id: 20,
     category: 'automation',
     character: '📅',
-    bounty: '🔧 FRANKY\'S TREASURE',
+    bounty: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg> FRANKY\'S TREASURE',
     name: 'Social Media Scheduler',
     shortDesc: 'Cross-platform scheduler — post to Twitter, Telegram, Reddit, Discord, Instagram.',
     fullDesc: 'A powerful cross-platform social media scheduler that lets you create, schedule, and auto-post content across Twitter/X, Telegram, Reddit, Discord, and Instagram from one dashboard. Features content calendars, analytics, team collaboration, and Flet desktop UI.',
@@ -316,7 +316,7 @@ const projectsData = [
     id: 21,
     category: 'automation',
     character: '📋',
-    bounty: '🔧 FRANKY\'S TREASURE',
+    bounty: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg> FRANKY\'S TREASURE',
     name: 'Appointment Booker',
     shortDesc: 'Python appointment booking bot with Playwright async and health checks.',
     fullDesc: 'An automated appointment booking bot that uses Playwright async for browser automation, httpx for health checks, and pydantic for configuration. Can autonomously navigate booking portals, fill forms, and secure appointments with retry logic.',
@@ -394,7 +394,7 @@ const projectsData = [
   {
     id: 26,
     category: 'automation',
-    character: '📈',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>',
     bounty: '🌊 JINBE\'S TREASURE',
     name: 'Business Analytics Dashboard',
     shortDesc: 'Full-stack BI dashboard with real-time analytics and Docker deployment.',
@@ -409,7 +409,7 @@ const projectsData = [
   {
     id: 27,
     category: 'ai',
-    character: '🎨',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>',
     bounty: '🌊 JINBE\'S TREASURE',
     name: 'AI Room Designer',
     shortDesc: 'AI-powered interior room design and visualization tool.',
@@ -499,7 +499,7 @@ const projectsData = [
   {
     id: 33,
     category: 'automation',
-    character: '📞',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'GHL Appointment Setter',
     shortDesc: 'AI chatbot that qualifies leads and books calls straight into a GoHighLevel calendar.',
@@ -514,7 +514,7 @@ const projectsData = [
   {
     id: 34,
     category: 'automation',
-    character: '⚡',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'GHL Lead Follow-Up',
     shortDesc: 'AI-qualifies inbound leads and triggers the right follow-up sequence in GoHighLevel.',
@@ -529,7 +529,7 @@ const projectsData = [
   {
     id: 35,
     category: 'automation',
-    character: '📱',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'GHL Missed-Call Text-Back',
     shortDesc: 'Catches lost leads: detects missed calls and follows up by SMS within seconds.',
@@ -634,8 +634,8 @@ const projectsData = [
   {
     id: 42,
     category: 'automation',
-    character: '📊',
-    bounty: '🔧 FRANKY\'S TREASURE',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>',
+    bounty: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg> FRANKY\'S TREASURE',
     name: 'n8n Reporting Agent',
     shortDesc: 'Automated weekly/daily business reports delivered via email or Slack.',
     fullDesc: 'Pulls data from multiple sources including CRM leads, web analytics, and revenue on a schedule, summarizes trends, and sends formatted reports via email or Slack. On-demand report generation, trend labeling, and cron scheduling, as an agent that works alongside n8n.',
@@ -650,7 +650,7 @@ const projectsData = [
     id: 43,
     category: 'ai',
     character: '📥',
-    bounty: '🔧 FRANKY\'S TREASURE',
+    bounty: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg> FRANKY\'S TREASURE',
     name: 'n8n Support Inbox',
     shortDesc: 'Unifies WhatsApp, email, and web chat into one AI-assisted support inbox.',
     fullDesc: 'A multi-channel support inbox where the AI drafts suggested replies that a human must approve before sending, AI-assisted rather than autonomous. Unifies WhatsApp, email, and website chat, with a keyword rules fallback and full conversation management.',
@@ -710,7 +710,7 @@ const projectsData = [
   {
     id: 47,
     category: 'web',
-    character: '🛠️',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'H2S Computer',
     shortDesc: 'Local computer shop website — transparent price list, testimonials, opening hours.',
@@ -725,7 +725,7 @@ const projectsData = [
   {
     id: 48,
     category: 'web',
-    character: '🧭',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'I-node',
     shortDesc: 'IT consultancy website — cloud, cybersecurity, software development.',
@@ -740,7 +740,7 @@ const projectsData = [
   {
     id: 49,
     category: 'web',
-    character: '🎨',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'inTown',
     shortDesc: 'Digital studio website — bold playful bento-grid SaaS design.',
@@ -846,7 +846,7 @@ const projectsData = [
   {
     id: 56,
     category: 'web',
-    character: '📱',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'Cellulopoli',
     shortDesc: 'Telefonia e accessori a Roma — glassmorphism su gradienti.',
@@ -906,7 +906,7 @@ const projectsData = [
   {
     id: 60,
     category: 'web',
-    character: '🔧',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'Telemania Service',
     shortDesc: 'Telefonia e riparazioni a Roma — storytelling a scorrimento.',
@@ -921,7 +921,7 @@ const projectsData = [
   {
     id: 61,
     category: 'web',
-    character: '💾',
+    character: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>',
     bounty: '💫 SANJI\'S TREASURE',
     name: 'Restart Computer',
     shortDesc: 'Informatica e recupero dati a Roma — neo-brutalismo audace.',

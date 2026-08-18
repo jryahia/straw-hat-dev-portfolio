@@ -159,10 +159,10 @@ panel becomes active (unless deliberate restore is wanted).
 ---
 
 ## Perf / CLS notes (checked, no action required)
-- Reveal uses opacity + transform only → no layout shift (CLS-safe). ✓
+- Reveal uses opacity + transform only → no layout shift (CLS-safe). <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
 - Modal open/close (`openProjectModal`/`closeProjectModal`, js/projects.js:639-664)
   verified working: `.active` + body `.modal-open` applied on open, both
-  reverted on close. Modal/animation smooth (0.4s modalSlideIn). ✓
+  reverted on close. Modal/animation smooth (0.4s modalSlideIn). <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
 - `body.modal-open { overflow:hidden }` (style.css:85) does NOT lock the inner
   `#projects-content` scroll, but that panel is hidden behind the overlay, so no
   functional issue.

@@ -137,7 +137,7 @@ const translations = {
             }
         },
         about: {
-            label: '📜 Captain\'s Log',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 11-4 0V5a2 2 0 012-2h14v14"/><path d="M4 19a2 2 0 01-2-2V5a2 2 0 012-2"/></svg> Captain\'s Log',
             title: 'The <span>Dev</span> Trip',
             voyage1: {
                 title: 'East Blue — The Craft Begins',
@@ -182,16 +182,16 @@ const translations = {
         },
         subProjects: {
             back: '← Back to Treasures',
-            restaurantsTitle: '🍽️ Sanji\'s Kitchen — Choose Your Feast',
+            restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> Sanji\'s Kitchen — Choose Your Feast',
             doctorsTitle: '🦌 Chopper\'s Clinic — Choose Your Treatment'
         },
         contact: {
-            label: '🤝 Nakama Wanted',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> Nakama Wanted',
             title: 'Join My Crew!',
             subtitle: 'Looking for a developer who codes like Zoro fights? Let\'s conquer the New World together!',
             github: 'GitHub',
             linkedin: 'LinkedIn',
-            denDenLabel: '📞 Den Den Mushi 📞',
+            denDenLabel: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Den Den Mushi <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>',
             emailReveal: 'Click to reveal email',
             quote: '"I don\'t want to conquer anything.<br>The guy with the most freedom... is the Pirate King!"'
         }
@@ -214,7 +214,7 @@ const translations = {
             }
         },
         about: {
-            label: '📜 Journal du Capitaine',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 11-4 0V5a2 2 0 012-2h14v14"/><path d="M4 19a2 2 0 01-2-2V5a2 2 0 012-2"/></svg> Journal du Capitaine',
             title: 'Le <span>Trip</span> Dev',
             voyage1: {
                 title: 'East Blue — Le Métier Commence',
@@ -259,16 +259,16 @@ const translations = {
         },
         subProjects: {
             back: '← Retour aux Trésors',
-            restaurantsTitle: '🍽️ Cuisine de Sanji — Choisissez Votre Festin',
+            restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> Cuisine de Sanji — Choisissez Votre Festin',
             doctorsTitle: '🦌 Clinique de Chopper — Choisissez Votre Traitement'
         },
         contact: {
-            label: '🤝 Nakama Recherché',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> Nakama Recherché',
             title: 'Rejoignez Mon Équipage !',
             subtitle: 'Vous cherchez un dev qui code comme Zoro se bat ? Conquérons le Nouveau Monde ensemble !',
             github: 'GitHub',
             linkedin: 'LinkedIn',
-            denDenLabel: '📞 Den Den Mushi 📞',
+            denDenLabel: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Den Den Mushi <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>',
             emailReveal: 'Cliquez pour révéler l\'email',
             quote: '"Je ne veux rien conquérir.<br>Celui qui a le plus de liberté... c\'est le Roi des Pirates !"'
         }
@@ -291,7 +291,7 @@ const translations = {
             }
         },
         about: {
-            label: '📜 Diario del Capitano',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 11-4 0V5a2 2 0 012-2h14v14"/><path d="M4 19a2 2 0 01-2-2V5a2 2 0 012-2"/></svg> Diario del Capitano',
             title: 'Il <span>Trip</span> Dev',
             voyage1: {
                 title: 'East Blue — L\'Arte Comincia',
@@ -336,16 +336,16 @@ const translations = {
         },
         subProjects: {
             back: '← Torna ai Tesori',
-            restaurantsTitle: '🍽️ Cucina di Sanji — Scegli Il Tuo Banchetto',
+            restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> Cucina di Sanji — Scegli Il Tuo Banchetto',
             doctorsTitle: '🦌 Clinica di Chopper — Scegli Il Tuo Trattamento'
         },
         contact: {
-            label: '🤝 Nakama Ricercato',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> Nakama Ricercato',
             title: 'Unisciti Al Mio Equipaggio!',
             subtitle: 'Cerchi un dev che programma come Zoro combatte? Conquistiamo il Nuovo Mondo insieme!',
             github: 'GitHub',
             linkedin: 'LinkedIn',
-            denDenLabel: '📞 Den Den Mushi 📞',
+            denDenLabel: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Den Den Mushi <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>',
             emailReveal: 'Clicca per rivelare l\'email',
             quote: '"Non voglio conquistare nulla.<br>Chi ha più libertà... è il Re dei Pirati!"'
         }
@@ -368,7 +368,7 @@ const translations = {
             }
         },
         about: {
-            label: '📜 Kapitäns Logbuch',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 11-4 0V5a2 2 0 012-2h14v14"/><path d="M4 19a2 2 0 01-2-2V5a2 2 0 012-2"/></svg> Kapitäns Logbuch',
             title: 'Die <span>Dev</span> Trip',
             voyage1: {
                 title: 'East Blue — Das Handwerk Beginnt',
@@ -413,16 +413,16 @@ const translations = {
         },
         subProjects: {
             back: '← Zurück zu Schätzen',
-            restaurantsTitle: '🍽️ Sanjis Küche — Wähle Dein Festmahl',
+            restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> Sanjis Küche — Wähle Dein Festmahl',
             doctorsTitle: '🦌 Choppers Klinik — Wähle Deine Behandlung'
         },
         contact: {
-            label: '🤝 Nakama Gesucht',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> Nakama Gesucht',
             title: 'Tritt Meiner Crew Bei!',
             subtitle: 'Suchst du einen Dev, der wie Zoro kämpft? Lass uns die Neue Welt erobern!',
             github: 'GitHub',
             linkedin: 'LinkedIn',
-            denDenLabel: '📞 Den Den Mushi 📞',
+            denDenLabel: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Den Den Mushi <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>',
             emailReveal: 'Klicken um E-Mail anzuzeigen',
             quote: '"Ich will nichts erobern.<br>Wer die meiste Freiheit hat... ist der Piratenkönig!"'
         }
@@ -445,7 +445,7 @@ const translations = {
             }
         },
         about: {
-            label: '📜 Журнал Капитана',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 11-4 0V5a2 2 0 012-2h14v14"/><path d="M4 19a2 2 0 01-2-2V5a2 2 0 012-2"/></svg> Журнал Капитана',
             title: 'The <span>Dev</span> Trip',
             voyage1: {
                 title: 'Ист Блю — Начало Ремесла',
@@ -490,16 +490,16 @@ const translations = {
         },
         subProjects: {
             back: '← Назад к Сокровищам',
-            restaurantsTitle: '🍽️ Кухня Санджи — Выберите Ваш Пир',
+            restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> Кухня Санджи — Выберите Ваш Пир',
             doctorsTitle: '🦌 Клиника Чоппера — Выберите Ваше Лечение'
         },
         contact: {
-            label: '🤝 Накама Разыскивается',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> Накама Разыскивается',
             title: 'Присоединяйся К Моей Команде!',
             subtitle: 'Ищешь разработчика, который кодит как Зоро сражается? Давай покорим Новый Мир вместе!',
             github: 'GitHub',
             linkedin: 'LinkedIn',
-            denDenLabel: '📞 Ден Ден Муши 📞',
+            denDenLabel: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Ден Ден Муши <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>',
             emailReveal: 'Нажмите, чтобы показать email',
             quote: '"Я не хочу ничего завоёвывать.<br>Тот, у кого больше всего свободы... это Король Пиратов!"'
         }
@@ -522,7 +522,7 @@ const translations = {
             }
         },
         about: {
-            label: '📜 船長の航海日誌',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 11-4 0V5a2 2 0 012-2h14v14"/><path d="M4 19a2 2 0 01-2-2V5a2 2 0 012-2"/></svg> 船長の航海日誌',
             title: '<span>開発者</span>のTrip',
             voyage1: {
                 title: '東の海 — 技術のはじまり',
@@ -567,16 +567,16 @@ const translations = {
         },
         subProjects: {
             back: '← 宝物に戻る',
-            restaurantsTitle: '🍽️ サンジのキッチン — ご馳走を選んでください',
+            restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> サンジのキッチン — ご馳走を選んでください',
             doctorsTitle: '🦌 チョッパーの診療所 — 治療を選んでください'
         },
         contact: {
-            label: '🤝 仲間募集',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> 仲間募集',
             title: '私の仲間になろう！',
             subtitle: 'ゾロのように戦うコーディングができる開発者をお探しですか？一緒にニューワールドを征服しましょう！',
             github: 'GitHub',
             linkedin: 'LinkedIn',
-            denDenLabel: '📞 電伝虫 📞',
+            denDenLabel: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 電伝虫 <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>',
             emailReveal: 'クリックしてメールを表示',
             quote: '"俺は何も征服したくない。<br>一番自由な奴が...海賊王だ！"'
         }
@@ -599,7 +599,7 @@ const translations = {
             }
         },
         about: {
-            label: '📜 سجل القبطان',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 11-4 0V5a2 2 0 012-2h14v14"/><path d="M4 19a2 2 0 01-2-2V5a2 2 0 012-2"/></svg> سجل القبطان',
             title: 'رحلة <span>الديف</span>',
             voyage1: {
                 title: 'الشرق الأزرق — بداية الحرفة',
@@ -644,16 +644,16 @@ const translations = {
         },
         subProjects: {
             back: '→ العودة للكنوز',
-            restaurantsTitle: '🍽️ مطبخ سانجي — اختر وليمتك',
+            restaurantsTitle: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> مطبخ سانجي — اختر وليمتك',
             doctorsTitle: '🦌 عيادة تشوبر — اختر علاجك'
         },
         contact: {
-            label: '🤝 مطلوب ناكاما',
+            label: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l-3.5 3.5L1 18l3.5-2.5M17 11l3.5 3.5L23 18l-3.5-2.5M12 2l-4 4 4 4 4-4-4-4z"/><path d="M12 10v12"/></svg> مطلوب ناكاما',
             title: 'انضم لطاقمي!',
             subtitle: 'تبحث عن مطور يبرمج مثلما يقاتل زورو؟ لنغزو العالم الجديد معاً!',
             github: 'GitHub',
             linkedin: 'LinkedIn',
-            denDenLabel: '📞 دن دن موشي 📞',
+            denDenLabel: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> دن دن موشي <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>',
             emailReveal: 'انقر لإظهار البريد الإلكتروني',
             quote: '"لا أريد أن أغزو أي شيء.<br>الشخص الذي لديه أكبر قدر من الحرية... هو ملك القراصنة!"'
         }

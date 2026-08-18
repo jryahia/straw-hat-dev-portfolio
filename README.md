@@ -1,4 +1,4 @@
-# 🏴‍☠️ Straw Hat Dev — Portfolio
+# <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg> Straw Hat Dev — Portfolio
 
 One Piece themed developer portfolio with 3D ocean scene (Three.js), 7-language i18n, PWA support, and dark mode.
 
