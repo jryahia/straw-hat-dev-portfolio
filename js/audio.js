@@ -23,7 +23,7 @@ playPromise=bgMusic.play();
 if(playPromise!==undefined){
 playPromise.then(function(){
 isPlaying=true;
-playBtn.textContent='⏸';
+playBtn.textContent='<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
 playBtn.classList.add('playing');
 }).catch(function(err){
 isPlaying=false;

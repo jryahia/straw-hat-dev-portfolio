@@ -174,7 +174,7 @@ const translations = {
             subtitle: 'Click any treasure to explore! <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'Search projects...',
             catAll: 'All', catAi: 'AI', catAutomation: 'Automation', catWeb: 'Websites',
-            brewing: '⚗️ Still Brewing...'
+            brewing: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 2v7.31"/><path d="M8.5 2h7"/><path d="M7 16h10"/><path d="M9.41 16L5.23 21"/><path d="M14.59 16L18.77 21"/><path d="M8.5 7.31h7"/></svg> Still Brewing...'
         },
         modal: {
             viewCode: 'View Code',
@@ -251,7 +251,7 @@ const translations = {
             subtitle: 'Cliquez sur un trésor pour explorer ! <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'Rechercher des projets...',
             catAll: 'Tous', catAi: 'IA', catAutomation: 'Automatisation', catWeb: 'Sites web',
-            brewing: '⚗️ En Préparation...'
+            brewing: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 2v7.31"/><path d="M8.5 2h7"/><path d="M7 16h10"/><path d="M9.41 16L5.23 21"/><path d="M14.59 16L18.77 21"/><path d="M8.5 7.31h7"/></svg> En Préparation...'
         },
         modal: {
             viewCode: 'Voir le Code',
@@ -328,7 +328,7 @@ const translations = {
             subtitle: 'Clicca su un tesoro per esplorare! <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'Cerca progetti...',
             catAll: 'Tutti', catAi: 'IA', catAutomation: 'Automazione', catWeb: 'Siti web',
-            brewing: '⚗️ In Preparazione...'
+            brewing: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 2v7.31"/><path d="M8.5 2h7"/><path d="M7 16h10"/><path d="M9.41 16L5.23 21"/><path d="M14.59 16L18.77 21"/><path d="M8.5 7.31h7"/></svg> In Preparazione...'
         },
         modal: {
             viewCode: 'Vedi Codice',
@@ -405,7 +405,7 @@ const translations = {
             subtitle: 'Klicke auf einen Schatz zum Erkunden! <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'Projekte suchen...',
             catAll: 'Alle', catAi: 'KI', catAutomation: 'Automatisierung', catWeb: 'Websites',
-            brewing: '⚗️ In Vorbereitung...'
+            brewing: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 2v7.31"/><path d="M8.5 2h7"/><path d="M7 16h10"/><path d="M9.41 16L5.23 21"/><path d="M14.59 16L18.77 21"/><path d="M8.5 7.31h7"/></svg> In Vorbereitung...'
         },
         modal: {
             viewCode: 'Code Ansehen',
@@ -482,7 +482,7 @@ const translations = {
             subtitle: 'Нажмите на сокровище, чтобы исследовать! <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'Поиск проектов...',
             catAll: 'Все', catAi: 'ИИ', catAutomation: 'Автоматизация', catWeb: 'Сайты',
-            brewing: '⚗️ В Разработке...'
+            brewing: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 2v7.31"/><path d="M8.5 2h7"/><path d="M7 16h10"/><path d="M9.41 16L5.23 21"/><path d="M14.59 16L18.77 21"/><path d="M8.5 7.31h7"/></svg> В Разработке...'
         },
         modal: {
             viewCode: 'Посмотреть Код',
@@ -559,7 +559,7 @@ const translations = {
             subtitle: '宝物をクリックして探索！<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'プロジェクトを検索...',
             catAll: 'すべて', catAi: 'AI', catAutomation: '自動化', catWeb: 'ウェブサイト',
-            brewing: '⚗️ 開発中...'
+            brewing: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 2v7.31"/><path d="M8.5 2h7"/><path d="M7 16h10"/><path d="M9.41 16L5.23 21"/><path d="M14.59 16L18.77 21"/><path d="M8.5 7.31h7"/></svg> 開発中...'
         },
         modal: {
             viewCode: 'コードを見る',
@@ -636,7 +636,7 @@ const translations = {
             subtitle: 'انقر على أي كنز للاستكشاف! <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg><svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><path d="M9 17h6"/><line x1="9" y1="19" x2="12" y2="17"/><line x1="15" y1="19" x2="12" y2="17"/></svg>️',
             searchPlaceholder: 'البحث عن مشاريع...',
             catAll: 'الكل', catAi: 'الذكاء الاصطناعي', catAutomation: 'الأتمتة', catWeb: 'المواقع',
-            brewing: '⚗️ قيد التطوير...'
+            brewing: '<svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 2v7.31"/><path d="M8.5 2h7"/><path d="M7 16h10"/><path d="M9.41 16L5.23 21"/><path d="M14.59 16L18.77 21"/><path d="M8.5 7.31h7"/></svg> قيد التطوير...'
         },
         modal: {
             viewCode: 'عرض الكود',
