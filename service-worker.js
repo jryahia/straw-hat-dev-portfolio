@@ -1,5 +1,5 @@
 // Q Fix: Service Worker for PWA offline support
-const CACHE_NAME = 'straw-hat-portfolio-v4';
+const CACHE_NAME = 'straw-hat-portfolio-v5';
 const ALLOWED_ORIGINS = [self.location.origin];
 const urlsToCache = [
   '/',
